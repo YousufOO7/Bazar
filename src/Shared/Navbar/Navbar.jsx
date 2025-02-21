@@ -3,7 +3,7 @@ import { FaSearch } from "react-icons/fa";
 
 const Navbar = () => {
     return (
-        <div className="bg-[black] text-white py-4 px-5 md:px-10 lg:px-16">
+        <div className="bg-[black] text-white py-4 px-2 md:px-5 lg:px-10">
             <div className="flex items-center gap-5 justify-between">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
