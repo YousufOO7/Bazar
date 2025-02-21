@@ -20,7 +20,7 @@ const Feature = () => {
             <TitleShared heading={"Feature Category"} subHeading={"Get your desired product from featured category"} />
 
             {/* feature items */}
-            <section className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 my-5 px-16">
+            <section className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 my-5 px-4 md:px-8 lg:px-16">
                 {
                     features.map(item => (
                         <div key={item.id} className="group bg-gray-200 px-2 py-5 rounded-xl">
