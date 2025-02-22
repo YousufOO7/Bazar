@@ -1,0 +1,39 @@
+[
+    {
+      "id": 1,
+      "image": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/ipad-10th-gen-hero-silver-wifi-select?wid=940&hei=1112&fmt=png-alpha&.v=1664481440761",
+      "title": "iPad 10.9 10th Gen - 2022",
+      "price": 55000
+    },
+    {
+      "id": 2,
+      "image": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/ipad-10th-gen-hero-yellow-wifi-select?wid=940&hei=1112&fmt=png-alpha&.v=1664481442306",
+      "title": "iPad 10.9 10th Gen - 2022",
+      "price": 56000
+    },
+    {
+      "id": 3,
+      "image": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/ipad-10th-gen-hero-blue-wifi-select?wid=940&hei=1112&fmt=png-alpha&.v=1664481441886",
+      "title": "iPad 10.9 10th Gen - 2022",
+      "price": 57000
+    },
+    {
+      "id": 4,
+      "image": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/ipad-10th-gen-hero-pink-wifi-select?wid=940&hei=1112&fmt=png-alpha&.v=1664481441677",
+      "title": "iPad 10.9 10th Gen - 2022",
+      "price": 58000
+    },
+    {
+      "id": 5,
+      "image": "https://m.media-amazon.com/images/I/71X5GqQW+dL._AC_SL1500_.jpg",
+      "title": "iPad 10.9 10th Gen - 2022",
+      "price": 59000
+    },
+    {
+      "id": 6,
+      "image": "https://m.media-amazon.com/images/I/71Nz8sGErzL._AC_SL1500_.jpg",
+      "title": "iPad 10.9 10th Gen - 2022",
+      "price": 60000
+    }
+  ]
+  

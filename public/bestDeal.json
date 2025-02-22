@@ -1,0 +1,75 @@
+[
+    {
+      "id": 1,
+      "image": "https://www.applegadgetsbd.com/_next/image?url=https%3A%2F%2Fadminapi.applegadgetsbd.com%2Fstorage%2Fmedia%2Fthumb%2FGalaxy-S25-Ultra-5G-Titanium-Gray-6080.jpg&w=256&q=100",
+      "title": "Galaxy A35 5G",
+      "price": 150000
+    },
+    {
+      "id": 2,
+      "image": "https://images.samsung.com/is/image/samsung/p6pim/levant/2302/gallery/levant-galaxy-s23-s911-sm-s911bzwdmea-thumb-534411419?$1300_1038_PNG$",
+      "title": "Galaxy S23",
+      "price": 180000
+    },
+    {
+      "id": 3,
+      "image": "https://image01.realme.net/general/20220926/1664178572935.png",
+      "title": "Realme GT Neo 5",
+      "price": 120000
+    },
+    {
+      "id": 4,
+      "image": "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-14-pro-max-1.jpg",
+      "title": "iPhone 14 Pro Max",
+      "price": 220000
+    },
+    {
+      "id": 5,
+      "image": "https://images.samsung.com/is/image/samsung/p6pim/levant/2302/gallery/levant-galaxy-s23-ultra-s918-sm-s918bzkgmea-thumb-534411428?$1300_1038_PNG$",
+      "title": "Galaxy S23 Ultra",
+      "price": 250000
+    },
+    {
+      "id": 6,
+      "image": "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-13-pro-1.jpg",
+      "title": "Xiaomi 13 Pro",
+      "price": 140000
+    },
+    {
+      "id": 7,
+      "image": "https://fdn2.gsmarena.com/vv/pics/oneplus/oneplus-11-1.jpg",
+      "title": "OnePlus 11",
+      "price": 130000
+    },
+    {
+      "id": 8,
+      "image": "https://fdn2.gsmarena.com/vv/pics/oppo/oppo-find-x6-pro-1.jpg",
+      "title": "Oppo Find X6 Pro",
+      "price": 160000
+    },
+    {
+      "id": 9,
+      "image": "https://fdn2.gsmarena.com/vv/pics/vivo/vivo-x90-pro-plus-1.jpg",
+      "title": "Vivo X90 Pro+",
+      "price": 170000
+    },
+    {
+      "id": 10,
+      "image": "https://fdn2.gsmarena.com/vv/pics/google/google-pixel-7-pro-1.jpg",
+      "title": "Google Pixel 7 Pro",
+      "price": 190000
+    },
+    {
+      "id": 11,
+      "image": "https://fdn2.gsmarena.com/vv/pics/asus/asus-rog-phone-6-pro-1.jpg",
+      "title": "Asus ROG Phone 6 Pro",
+      "price": 200000
+    },
+    {
+      "id": 12,
+      "image": "https://fdn2.gsmarena.com/vv/pics/motorola/motorola-edge-30-ultra-1.jpg",
+      "title": "Motorola Edge 30 Ultra",
+      "price": 145000
+    }
+  ]
+  

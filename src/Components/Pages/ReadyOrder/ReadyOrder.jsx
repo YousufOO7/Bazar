@@ -73,7 +73,7 @@ const ReadyOrder = () => {
                                     </div>
                                     
                                     <div className="flex justify-evenly pb-3">
-                                        <button className="lg:px-4 p-1 font-semibold text-xs lg:text-sm bg-[#ff882a] text-white rounded-md">Buy Noe</button>
+                                        <button className="lg:px-4 p-1  text-xs lg:text-sm bg-[#ff882a] text-white rounded-md">Buy Noe</button>
                                         <button className="lg:px-2 p-1 border border-[#ff882a] text-[#ff882a] text-xs lg:text-sm rounded-md">Add To Cart</button>
                                     </div>
                                 </div>
