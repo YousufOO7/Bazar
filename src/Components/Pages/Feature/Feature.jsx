@@ -17,7 +17,9 @@ const Feature = () => {
     return (
         <div className="my-10">
             {/* title */}
-            <TitleShared heading={"Feature Category"} subHeading={"Get your desired product from featured category"} />
+            <div className="mb-10">
+                <TitleShared heading={"Feature Category"} subHeading={"Get your desired product from featured category"} />
+            </div>
 
             {/* feature items */}
             <section className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 my-5 px-4 md:px-8 lg:px-16">
