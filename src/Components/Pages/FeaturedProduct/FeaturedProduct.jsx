@@ -95,6 +95,17 @@ const FeaturedProduct = () => {
                 )
             }
 
+            {/* images for adds */}
+
+            <div className="flex gap-5 my-10 px-5 md:px-8 lg:px16">
+                <div>
+                    <img src="https://adminapi.applegadgetsbd.com/storage/media/large/MacBook-Air-M2-7448.png" alt="" />
+                </div>
+                <div>
+                    <img src="https://adminapi.applegadgetsbd.com/storage/media/large/Pixel-9-1243.png" alt="" />
+                </div>
+            </div>
+
         </div>
     );
 };

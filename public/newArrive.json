@@ -1,0 +1,75 @@
+[
+    {
+      "id": 1,
+      "title": "JBL AirBeam Pro - Bluetooth 5.3",
+      "image": "https://www.applegadgetsbd.com/_next/image?url=https%3A%2F%2Fadminapi.applegadgetsbd.com%2Fstorage%2Fmedia%2Fthumb%2FJBL-Live-Beam-3-NC-TWS-Earbuds-blue-5306.jpg&w=256&q=100",
+      "price": "2500"
+    },
+    {
+      "id": 2,
+      "title": "JBL AirPods X - Noise Cancelling",
+      "image": "https://images.jbl.com/JBL_LivePro2TWS_ProductImage_Hero_Black.png",
+      "price": "2800"
+    },
+    {
+      "id": 3,
+      "title": "JBL AirGo Lite - Ultra Clear Sound",
+      "image": "https://images.jbl.com/JBL_TuneFlex_ProductImage_Hero_Black.png",
+      "price": "2000"
+    },
+    {
+      "id": 4,
+      "title": "JBL AirConnect - Fast Pairing",
+      "image": "https://images.jbl.com/JBL_Wave200TWS_ProductImage_Hero_Black.png",
+      "price": "1700"
+    },
+    {
+      "id": 5,
+      "title": "JBL AirPlay Max - High Bass",
+      "image": "https://images.jbl.com/JBL_ReflectFlowPRO_ProductImage_Hero_Black.png",
+      "price": "2300"
+    },
+    {
+      "id": 6,
+      "title": "JBL AirTouch - Touch Controls",
+      "image": "https://images.jbl.com/JBL_QuantumTWS_ProductImage_Hero_Black.png",
+      "price": "3000"
+    },
+    {
+      "id": 7,
+      "title": "JBL AirPro X - Sweat Resistant",
+      "image": "https://images.jbl.com/JBL_EndurancePeak3_ProductImage_Hero_Black.png",
+      "price": "1900"
+    },
+    {
+      "id": 8,
+      "title": "JBL AirMax - Extended Battery Life",
+      "image": "https://images.jbl.com/JBL_LiveFreeNC+TWS_ProductImage_Hero_Black.png",
+      "price": "2700"
+    },
+    {
+      "id": 9,
+      "title": "JBL AirSurround - 360° Sound",
+      "image": "https://images.jbl.com/JBL_Tune230NC_ProductImage_Hero_Black.png",
+      "price": "2600"
+    },
+    {
+      "id": 10,
+      "title": "JBL AirBoost - Enhanced Bass",
+      "image": "https://images.jbl.com/JBL_EnduranceRace_ProductImage_Hero_Black.png",
+      "price": "2400"
+    },
+    {
+      "id": 11,
+      "title": "JBL AirPods Ultra - Quick Charge",
+      "image": "https://images.jbl.com/JBL_FreeX_ProductImage_Hero_Black.png",
+      "price": "2200"
+    },
+    {
+      "id": 12,
+      "title": "JBL AirTWS - Low Latency Mode",
+      "image": "https://images.jbl.com/JBL_Tune125TWS_ProductImage_Hero_Black.png",
+      "price": "2100"
+    }
+  ]
+  
