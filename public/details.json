@@ -1,0 +1,117 @@
+{
+    "id": 1001,
+    "name": "Samsung Galaxy A35 5G",
+    "Images": {
+      "First_View": "https://www.91-img.com/pictures/166095-v1-iqoo-neo-10-pro-mobile-phone-large-1.jpg",
+      "Second_View": "https://www.91-img.com/pictures/166095-v1-iqoo-neo-10-pro-mobile-phone-large-2.jpg",
+      "Group_View": "https://www.91-img.com/pictures/166095-v1-iqoo-neo-10-pro-mobile-phone-large-3.jpg"
+    },
+    "Key_Specs": {
+      "Display": "6.6-inch Super AMOLED, 1080 x 2340 pixels, 120Hz refresh rate",
+      "Processor": "Exynos 1380 (5 nm)",
+      "RAM": "6GB / 8GB / 12GB",
+      "Storage": "128GB / 256GB, expandable via microSDXC",
+      "Rear_Camera": "50MP (wide) + 8MP (ultrawide) + 5MP (macro)",
+      "Front_Camera": "13MP",
+      "Battery": "5000mAh with 25W fast charging",
+      "OS": "Android 14 with One UI 6.1",
+      "5G_Support": true
+    },
+    "General": {
+      "Brand": "Samsung",
+      "Model": "Galaxy A35 5G",
+      "Release_Date": "March 15, 2024",
+      "Dimensions": "161.7 x 78.0 x 8.2 mm",
+      "Weight": "209g",
+      "Colors": ["Awesome Iceblue", "Lilac", "Navy", "Lemon"],
+      "Price": "$369"
+    },
+    "Performance": {
+      "Chipset": "Exynos 1380 (5 nm)",
+      "CPU": "Octa-core (4x2.4 GHz Cortex-A78 & 4x2.0 GHz Cortex-A55)",
+      "GPU": "Mali-G68 MP5",
+      "RAM": ["6GB", "8GB", "12GB"],
+      "Software": "Android 14 with One UI 6.1",
+      "Software_Updates": "Up to 4 major Android upgrades"
+    },
+    "Display": {
+      "Type": "Super AMOLED",
+      "Size": "6.6 inches",
+      "Resolution": "1080 x 2340 pixels",
+      "Aspect_Ratio": "19.5:9",
+      "Pixel_Density": "390 ppi",
+      "Refresh_Rate": "120Hz",
+      "Brightness": "1000 nits (HBM)",
+      "Protection": "Corning Gorilla Glass Victus+",
+      "Features": ["Always-on display"],
+      "Image": "https://example.com/images/galaxy_a35_5g_display.jpg"
+    },
+    "Design": {
+      "Dimensions": "161.7 x 78.0 x 8.2 mm",
+      "Weight": "209g",
+      "Build": "Plastic back, plastic frame",
+      "Colors": ["Awesome Iceblue", "Lilac", "Navy", "Lemon"],
+      "Water_Resistance": "IP67 dust/water resistant (up to 1m for 30 min)",
+      "Image": "https://example.com/images/galaxy_a35_5g_design.jpg"
+    },
+    "Camera": {
+      "Rear_Camera": {
+        "Triple": [
+          {
+            "Sensor": "50 MP",
+            "Aperture": "f/1.8",
+            "Features": ["PDAF", "OIS"]
+          },
+          {
+            "Sensor": "8 MP",
+            "Aperture": "f/2.2",
+            "Features": ["123˚ ultrawide"]
+          },
+          {
+            "Sensor": "5 MP",
+            "Aperture": "f/2.4",
+            "Features": ["macro"]
+          }
+        ],
+        "Video": ["4K@30fps", "1080p@30/60fps", "gyro-EIS"],
+        "Image": "https://example.com/images/galaxy_a35_5g_camera_rear.jpg"
+      },
+      "Front_Camera": {
+        "Single": {
+          "Sensor": "13 MP",
+          "Aperture": "f/2.2"
+        },
+        "Video": ["4K@30fps", "1080p@30fps"],
+        "Image": "https://example.com/images/galaxy_a35_5g_camera_front.jpg"
+      }
+    },
+    "Battery": {
+      "Capacity": "5000mAh",
+      "Type": "Li-Ion, non-removable",
+      "Charging": "25W wired fast charging",
+      "Battery_Life": "Up to 2 days on a single charge",
+      "Image": "https://example.com/images/galaxy_a35_5g_battery.jpg"
+    },
+    "Storage": {
+      "Internal": ["128GB", "256GB"],
+      "Expandable": "microSDXC (uses shared SIM slot), up to 1TB",
+      "Image": "https://example.com/images/galaxy_a35_5g_storage.jpg"
+    },
+    "Network_&_Connectivity": {
+      "SIM": "Single SIM (Nano-SIM) or Hybrid Dual SIM (Nano-SIM, dual stand-by)",
+      "Network_Types": ["GSM", "HSPA", "LTE", "5G"],
+      "Wi-Fi": ["Wi-Fi 802.11 a/b/g/n/ac/6", "dual-band", "Wi-Fi Direct"],
+      "Bluetooth": "5.3, A2DP, LE",
+      "GPS": ["GPS", "GALILEO", "GLONASS", "BDS", "QZSS"],
+      "NFC": true,
+      "USB": "USB Type-C 2.0, OTG",
+      "Image": "https://example.com/images/galaxy_a35_5g_connectivity.jpg"
+    },
+    "Multimedia": {
+      "Loudspeaker": "Yes, with stereo speakers",
+      "3.5mm_Jack": false,
+      "Image": "https://example.com/images/galaxy_a35_5g_multimedia.jpg"
+    },
+    "Sensors": ["Fingerprint (under display, optical)", "accelerometer", "gyro", "compass"]
+  }
+  

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import TitleShared from "../../../Shared/TitleShared/TitleShared";
 import axios from "axios";
+import { Link } from "react-router";
 
 
 const Feature = () => {
@@ -25,7 +26,7 @@ const Feature = () => {
             <section className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 my-5 px-4 md:px-8 lg:px-16">
                 {
                     features.map(item => (
-                        <div key={item.id} className="group bg-gray-200 px-2 py-5 rounded-xl">
+                        <Link to="details"><div key={item.id} className="group bg-gray-200 px-2 py-5 rounded-xl">
                             <div className="flex justify-center">
                                 <img src={item.image} alt="" className="w-20" />
                             </div>
@@ -33,6 +34,7 @@ const Feature = () => {
                                 <p className="group-hover:text-[#FF882A]">{item.category}</p>
                             </div>
                         </div>
+                        </Link>
                     ))
                 }
             </section>
