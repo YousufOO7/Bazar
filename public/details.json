@@ -18,6 +18,7 @@
       "5G_Support": true
     },
     "General": {
+      "OperatingSystem": "Android v14",
       "Brand": "Samsung",
       "Model": "Galaxy A35 5G",
       "Release_Date": "March 15, 2024",
@@ -43,7 +44,7 @@
       "Refresh_Rate": "120Hz",
       "Brightness": "1000 nits (HBM)",
       "Protection": "Corning Gorilla Glass Victus+",
-      "Features": ["Always-on display"],
+      "Features": "Always-on display",
       "Image": "https://example.com/images/galaxy_a35_5g_display.jpg"
     },
     "Design": {
@@ -60,7 +61,7 @@
           {
             "Sensor": "50 MP",
             "Aperture": "f/1.8",
-            "Features": ["PDAF", "OIS"]
+            "Features": ["PDAF", "OIS", "Primary Camera"]
           },
           {
             "Sensor": "8 MP",
@@ -74,7 +75,7 @@
           }
         ],
         "Video": ["4K@30fps", "1080p@30/60fps", "gyro-EIS"],
-        "Image": "https://example.com/images/galaxy_a35_5g_camera_rear.jpg"
+        "Image": "8192 x 6144 pixels"
       },
       "Front_Camera": {
         "Single": {
@@ -82,7 +83,7 @@
           "Aperture": "f/2.2"
         },
         "Video": ["4K@30fps", "1080p@30fps"],
-        "Image": "https://example.com/images/galaxy_a35_5g_camera_front.jpg"
+        "Image": "4160 x 3120 pixels."
       }
     },
     "Battery": {
@@ -97,19 +98,19 @@
       "Expandable": "microSDXC (uses shared SIM slot), up to 1TB",
       "Image": "https://example.com/images/galaxy_a35_5g_storage.jpg"
     },
-    "Network_&_Connectivity": {
+    "Network_Connectivity": {
       "SIM": "Single SIM (Nano-SIM) or Hybrid Dual SIM (Nano-SIM, dual stand-by)",
       "Network_Types": ["GSM", "HSPA", "LTE", "5G"],
-      "Wi-Fi": ["Wi-Fi 802.11 a/b/g/n/ac/6", "dual-band", "Wi-Fi Direct"],
+      "Wi_Fi": ["Wi-Fi 802.11 a/b/g/n/ac/6", "dual-band", "Wi-Fi Direct"],
       "Bluetooth": "5.3, A2DP, LE",
       "GPS": ["GPS", "GALILEO", "GLONASS", "BDS", "QZSS"],
-      "NFC": true,
+      "NFC": "true",
       "USB": "USB Type-C 2.0, OTG",
       "Image": "https://example.com/images/galaxy_a35_5g_connectivity.jpg"
     },
     "Multimedia": {
       "Loudspeaker": "Yes, with stereo speakers",
-      "3.5mm_Jack": false,
+      "mm_Jack": "false",
       "Image": "https://example.com/images/galaxy_a35_5g_multimedia.jpg"
     },
     "Sensors": ["Fingerprint (under display, optical)", "accelerometer", "gyro", "compass"]

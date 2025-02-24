@@ -4,6 +4,7 @@ import { BiSolidMemoryCard } from "react-icons/bi";
 import { FaPhoneVolume } from "react-icons/fa";
 import { FaSimCard } from "react-icons/fa6";
 import { Md5G, MdFingerprint } from "react-icons/md";
+import DetailsInfo from "./DetailsInfo";
 
 const DetailsPage = () => {
 
@@ -15,6 +16,9 @@ const DetailsPage = () => {
                 setDetails(res.data)
             })
     }, [])
+
+    const { Key_Specs, Performance, General, Display, Design, Camera, Battery, Storage, Network_Connectivity, Multimedia } = details;
+
 
     return (
         <div className="bg-gray-200">
@@ -52,29 +56,38 @@ const DetailsPage = () => {
                         </div>
 
                         <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
-                            <div>
+                            {/* Performance */}
+                            <div className="space-y-2">
                                 <h3 className="text-lg text-gray-500">Performance</h3>
-                                <p className="text-xs">Lorem ipsum, dolor sit amet consectetur adipisicing </p>
-                                <p className="text-xs">Lorem ipsum, dolor sit amet consectetur adipisicing </p>
-                                <p className="text-xs">Lorem ipsum, dolor sit amet consectetur adipisicing </p>
+                                <p className="text-xs">{Performance?.CPU?.slice(0, 24)}...</p>
+                                <p className="text-xs">{Performance?.GPU} </p>
+                                <p className="text-xs">{Performance?.RAM[2]} RAM</p>
                             </div>
-                            <div className="border border-l-2 border-t-0 border-b-0 border-r-0 pl-3">
+                            {/* Display */}
+                            <div className="border border-l-2 border-t-0 border-b-0 border-r-0 pl-3 space-y-2">
                                 <h3 className="text-lg text-gray-500">Display</h3>
-                                <p className="text-xs">Lorem ipsum, dolor sit amet consectetur adipisicing </p>
-                                <p className="text-xs">Lorem ipsum, dolor sit amet consectetur adipisicing </p>
-                                <p className="text-xs">Lorem ipsum, dolor sit amet consectetur adipisicing </p>
+                                <p className="text-xs">{Display?.Size} </p>
+                                <p className="text-xs">{Display?.Type} </p>
+                                <p className="text-xs">{Display?.Refresh_Rate} Refresh Rate</p>
                             </div>
-                            <div className="border border-l-2 border-t-0 border-b-0 border-r-0 pl-3">
+                            {/* Camera */}
+                            <div className="border border-l-2 border-t-0 border-b-0 border-r-0 pl-3 space-y-2">
                                 <h3 className="text-lg text-gray-500">Camera</h3>
-                                <p className="text-xs">Lorem ipsum, dolor sit amet consectetur adipisicing </p>
-                                <p className="text-xs">Lorem ipsum, dolor sit amet consectetur adipisicing </p>
-                                <p className="text-xs">Lorem ipsum, dolor sit amet consectetur adipisicing </p>
+                                <p className="text-xs">
+                                    <span>{Camera?.Rear_Camera?.Triple[0]?.Sensor}</span>
+                                    <span className="ml-2">{Camera?.Rear_Camera?.Triple[0]?.Features.join(" , ").slice(0, 18)}...</span>
+                                </p>
+                                <p className="text-xs">
+                                    <span>{Camera?.Front_Camera?.Single.Sensor}</span>
+                                    <span className="ml-2">{Camera?.Front_Camera?.Single.Aperture} Front Camera</span>
+                                </p>
                             </div>
-                            <div className="border border-l-2 border-t-0 border-b-0 border-r-0 pl-3">
+                            {/* Battery */}
+                            <div className="border border-l-2 border-t-0 border-b-0 border-r-0 pl-3 space-y-2">
                                 <h3 className="text-lg text-gray-500">Battery</h3>
-                                <p className="text-xs">Lorem ipsum, dolor sit amet consectetur adipisicing </p>
-                                <p className="text-xs">Lorem ipsum, dolor sit amet consectetur adipisicing </p>
-                                <p className="text-xs">Lorem ipsum, dolor sit amet consectetur adipisicing </p>
+                                <p className="text-xs">{Battery?.Capacity} </p>
+                                <p className="text-xs">{Battery?.Charging} </p>
+                                <p className="text-xs">{Battery?.Battery_Life?.slice(0, 24)}...</p>
                             </div>
                         </div>
                         <div className="mt-5"><hr /></div>
@@ -103,7 +116,11 @@ const DetailsPage = () => {
 
                     </section>
                 </section>
+
+
             </div>
+
+            <DetailsInfo details={details} />
         </div>
     );
 };
