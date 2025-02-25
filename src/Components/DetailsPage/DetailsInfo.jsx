@@ -5,7 +5,7 @@ const DetailsInfo = ({ details }) => {
     const { Key_Specs, Performance, General, Display, Design, Camera, Battery, Storage, Network_Connectivity, Multimedia } = details;
 
     return (
-        <div className="bg-white mt-10  max-w-6xl mx-auto px-10">
+        <div className="bg-white mt-10  max-w-6xl mx-auto px-4 lg:px-10">
             <div>
                 <h2 className="text-3xl pt-2 font-semibold">Samsung Galaxy A35 5G</h2>
             </div>
@@ -14,10 +14,10 @@ const DetailsInfo = ({ details }) => {
                 <div className="py-3"><hr /></div>
                 {/* Key Specs Section */}
                 <div className="grid grid-cols-12">
-                    <div className="col-span-2">
-                        <h2 className="text-gray-500 text-2xl">Key Specs</h2>
+                    <div className="col-span-3 md:col-span-2">
+                        <h2 className="text-gray-500 text-lg md:text-2xl">Key Specs</h2>
                     </div>
-                    <ul className="col-span-8 space-y-2">
+                    <ul className="col-span-9 md:col-span-8 space-y-2">
                         <li className="flex col-span-8">
                             <p className="w-[50%] font-semibold">RAM & Storage</p>
                             <p className="w-[50%]">{Key_Specs?.Storage}</p>
@@ -48,10 +48,10 @@ const DetailsInfo = ({ details }) => {
                 <div className="py-3"><hr /></div>
                 {/* General Section */}
                 <div className="grid grid-cols-12">
-                    <div className="col-span-2">
+                    <div className="col-span-3 md:col-span-2">
                         <h2 className="text-gray-500 text-2xl">General</h2>
                     </div>
-                    <ul className="col-span-8 space-y-2">
+                    <ul className="col-span-9 md:col-span-8 space-y-2">
                         <li className="flex col-span-8">
                             <p className="w-[50%] font-semibold">Operating System</p>
                             <p className="w-[50%]">{General?.OperatingSystem}</p>
@@ -74,10 +74,10 @@ const DetailsInfo = ({ details }) => {
 
                 {/* Performance Section */}
                 <div className="grid grid-cols-12">
-                    <div className="col-span-2">
-                        <h2 className="text-gray-500 text-2xl">Performance</h2>
+                    <div className="col-span-3 md:col-span-2">
+                        <h2 className="text-gray-500  md:text-xl lg:text-2xl">Performance</h2>
                     </div>
-                    <ul className="col-span-8 space-y-2">
+                    <ul className="col-span-9 md:col-span-8 space-y-2">
                         <li className="flex col-span-8">
                             <p className="w-[50%] font-semibold">Chipset</p>
                             <p className="w-[50%]">{Performance?.Chipset}</p>
@@ -108,10 +108,10 @@ const DetailsInfo = ({ details }) => {
 
                 {/* Display Section */}
                 <div className="grid grid-cols-12">
-                    <div className="col-span-2">
+                    <div className="col-span-3 md:col-span-2">
                         <h2 className="text-gray-500 text-2xl">Display</h2>
                     </div>
-                    <ul className="col-span-8 space-y-2">
+                    <ul className="col-span-9 md:col-span-8 space-y-2">
                         <li className="flex col-span-8">
                             <p className="w-[50%] font-semibold">Display Type</p>
                             <p className="w-[50%]">{Display?.Type}</p>
@@ -154,10 +154,10 @@ const DetailsInfo = ({ details }) => {
 
                 {/* Design Section */}
                 <div className="grid grid-cols-12">
-                    <div className="col-span-2">
+                    <div className="col-span-3 md:col-span-2">
                         <h2 className="text-gray-500 text-2xl">Design</h2>
                     </div>
-                    <ul className="col-span-8 space-y-2">
+                    <ul className="col-span-9 md:col-span-8 space-y-2">
                         <li className="flex col-span-8">
                             <p className="w-[50%] font-semibold">Dimensions</p>
                             <p className="w-[50%]">{Design?.Dimensions}</p>
@@ -184,10 +184,10 @@ const DetailsInfo = ({ details }) => {
 
                 {/* Camera Section */}
                 <div className="grid grid-cols-12">
-                    <div className="col-span-2">
+                    <div className="col-span-3 md:col-span-2">
                         <h2 className="text-gray-500 text-2xl">Camera</h2>
                     </div>
-                    <ul className="col-span-8 space-y-2">
+                    <ul className="col-span-9 md:col-span-8 space-y-2">
                         {/* Main Camera */}
                         <li className="flex col-span-8">
                             <p className="w-[50%] font-semibold">Main Camera</p>
@@ -253,10 +253,10 @@ const DetailsInfo = ({ details }) => {
 
                 {/* Battery Section */}
                 <div className="grid grid-cols-12">
-                    <div className="col-span-2">
+                    <div className="col-span-3 md:col-span-2">
                         <h2 className="text-gray-500 text-2xl">Battery</h2>
                     </div>
-                    <ul className="col-span-8 space-y-2">
+                    <ul className="col-span-9 md:col-span-8 space-y-2">
                         <li className="flex col-span-8">
                             <p className="w-[50%] font-semibold">Capacity</p>
                             <p className="w-[50%]">{Battery?.Capacity}</p>
@@ -279,10 +279,10 @@ const DetailsInfo = ({ details }) => {
 
                 {/* Storage Section */}
                 <div className="grid grid-cols-12">
-                    <div className="col-span-2">
+                    <div className="col-span-3 md:col-span-2">
                         <h2 className="text-gray-500 text-2xl">Storage</h2>
                     </div>
-                    <ul className="col-span-8 space-y-2">
+                    <ul className="col-span-9 md:col-span-8 space-y-2">
                         <li className="flex col-span-8">
                             <p className="w-[50%] font-semibold">Capacity</p>
                             <p className="w-[50%]">{Storage?.Internal?.join(" , ")}</p>
@@ -297,10 +297,10 @@ const DetailsInfo = ({ details }) => {
 
                 {/* Network_Connectivity Section */}
                 <div className="grid grid-cols-12">
-                    <div className="col-span-2">
-                        <h2 className="text-gray-500 text-2xl">Network & Connectivity</h2>
+                    <div className="col-span-3 md:col-span-2">
+                        <h2 className="text-gray-500 text-lg md:text-xl lg:text-2xl">Network & Connectivity</h2>
                     </div>
-                    <ul className="col-span-8 space-y-2">
+                    <ul className="col-span-9 md:col-span-8 space-y-2">
                         <li className="flex col-span-8">
                             <p className="w-[50%] font-semibold">SIM</p>
                             <p className="w-[50%]">{Network_Connectivity?.SIM}</p>
@@ -335,10 +335,10 @@ const DetailsInfo = ({ details }) => {
 
                 {/* Multimedia Section */}
                 <div className="grid grid-cols-12">
-                    <div className="col-span-2">
-                        <h2 className="text-gray-500 text-2xl">Multimedia</h2>
+                    <div className="col-span-3 md:col-span-2">
+                        <h2 className="text-gray-500 text-lg md:text-xl lg:text-2xl">Multimedia</h2>
                     </div>
-                    <ul className="col-span-8 space-y-2">
+                    <ul className="col-span-9 md:col-span-8 space-y-2">
                         <li className="flex col-span-8">
                             <p className="w-[50%] font-semibold">Loudspeaker</p>
                             <p className="w-[50%]">{Multimedia?.Loudspeaker}</p>

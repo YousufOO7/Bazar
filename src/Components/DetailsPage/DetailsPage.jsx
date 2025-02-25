@@ -17,7 +17,7 @@ const DetailsPage = () => {
             })
     }, [])
 
-    const { Key_Specs, Performance, General, Display, Design, Camera, Battery, Storage, Network_Connectivity, Multimedia } = details;
+    const { Key_Specs, Performance, Images, Display, Design, Camera, Battery, Storage, Network_Connectivity, Multimedia } = details;
 
 
     return (
@@ -41,10 +41,10 @@ const DetailsPage = () => {
                         </div>
 
                         <div className="lg:hidden">
-                            <div className="flex justify-center gap-4 mt-5 md:mt-20">
-                                <div><img src="" alt="" className="w-12 h-12" /></div>
-                                <div><img src="" alt="" className="w-12 h-12" /></div>
-                                <div><img src="" alt="" className="w-12 h-12" /></div>
+                            <div className="flex justify-center gap-4 mt-5 ">
+                                <div><img src={Images?.First_View} alt="" className="w-12 h-12" /></div>
+                                <div><img src={Images?.Second_View} alt="" className="w-12 h-12" /></div>
+                                <div><img src={Images?.Group_View} alt="" className="w-12 h-12" /></div>
                             </div>
                         </div>
                     </div>
@@ -93,24 +93,30 @@ const DetailsPage = () => {
                         <div className="mt-5"><hr /></div>
 
                         <ul className="grid grid-cols-2 md:grid-cols-3 pt-5 lg:pt-0 lg:mt-5 gap-5 lg:gap-0 lg:space-y-5">
-                            <li className="flex items-center"><BiSolidMemoryCard className="text-3xl text-gray-500" /> <span className="text-xs">256 GB, <span className="text-red-600">Non Expandable</span></span></li>
+                            <li className="flex items-center"><BiSolidMemoryCard className="text-3xl text-gray-500" /> <span className="text-xs">{Storage?.Internal[1]},
+                                {
+                                    Storage?.Expandable ? 
+                                    <span>{Storage?.Expandable}</span>
+                                    : <span className="text-red-600">Non Expandable</span>
+                                }
+                            </span></li>
 
-                            <li className="flex items-center"><FaSimCard className="text-2xl text-gray-500" /> <span className="text-xs">Dual SIM: Nano + Nano</span></li>
+                            <li className="flex items-center"><FaSimCard className="text-2xl text-gray-500" /> <span className="text-xs">{Network_Connectivity?.SIM?.slice(0, 20)}...</span></li>
 
-                            <li className="flex items-center"><Md5G className="text-3xl text-gray-500" /> <span className="text-xs">Supported</span></li>
+                            <li className="flex items-center"><Md5G className="text-3xl text-gray-500" /> <span className="text-xs"> {Key_Specs?.fiveG_Support}</span></li>
 
-                            <li className="flex items-center"><FaPhoneVolume className="text-3xl text-gray-500" /> <span className="text-xs">VOLTE</span></li>
+                            <li className="flex items-center"><FaPhoneVolume className="text-3xl text-gray-500" /> <span className="text-xs">{Multimedia?.Loudspeaker}</span></li>
 
-                            <li className="flex items-center"><MdFingerprint className="text-3xl text-gray-500" /> <span className="text-xs">Fingerprint sensor</span></li>
+                            <li className="flex items-center"><MdFingerprint className="text-3xl text-gray-500" /> <span className="text-xs">{Display?.Fingerprint_Sensor}</span></li>
                         </ul>
 
                         <div className="mt-5"><hr /></div>
                         {/* ph extra image */}
                         <div className="hidden lg:block">
                             <div className="lg:flex gap-4 mt-5">
-                                <div className="border"><img src="" alt="" className="w-24 h-24" /></div>
-                                <div className="border"><img src="" alt="" className="w-24 h-24" /></div>
-                                <div className="border"><img src="" alt="" className="w-24 h-24" /></div>
+                                <div><img src={Images?.First_View} alt="" className="w-20 h-24" /></div>
+                                <div><img src={Images?.Second_View} alt="" className="w-20 h-24" /></div>
+                                <div><img src={Images?.Group_View} alt="" className="w-20 h-24" /></div>
                             </div>
                         </div>
 

@@ -15,7 +15,7 @@
       "Front_Camera": "13MP",
       "Battery": "5000mAh with 25W fast charging",
       "OS": "Android 14 with One UI 6.1",
-      "5G_Support": true
+      "fiveG_Support": "True"
     },
     "General": {
       "OperatingSystem": "Android v14",
@@ -45,6 +45,7 @@
       "Brightness": "1000 nits (HBM)",
       "Protection": "Corning Gorilla Glass Victus+",
       "Features": "Always-on display",
+      "Fingerprint_Sensor": "Under-display, optical",
       "Image": "https://example.com/images/galaxy_a35_5g_display.jpg"
     },
     "Design": {
@@ -95,7 +96,7 @@
     },
     "Storage": {
       "Internal": ["128GB", "256GB"],
-      "Expandable": "microSDXC (uses shared SIM slot), up to 1TB",
+      "Expandable": "microSDXC, up to 1TB",
       "Image": "https://example.com/images/galaxy_a35_5g_storage.jpg"
     },
     "Network_Connectivity": {
