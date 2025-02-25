@@ -5,6 +5,8 @@ import { FaPhoneVolume } from "react-icons/fa";
 import { FaSimCard } from "react-icons/fa6";
 import { Md5G, MdFingerprint } from "react-icons/md";
 import DetailsInfo from "./DetailsInfo";
+import ReactImageMagnify from 'react-image-magnify';
+import DetailsGallery from "./DetailsGallery";
 
 const DetailsPage = () => {
 
@@ -37,11 +39,23 @@ const DetailsPage = () => {
                 <section className="md:flex">
                     <div className=" md:h-[72vh]">
                         <div className="flex justify-center md:flex-col py-2">
-                            <img src="https://www.91-img.com/pictures/166095-v1-iqoo-neo-10-pro-mobile-phone-large-1.jpg" alt="image" className="border md:border-r border-t-0 border-b-0 w-[36vw]" />
+                            <ReactImageMagnify {...{
+                                smallImage: {
+                                    alt: 'Wristwatch by Ted Baker London',
+                                    isFluidWidth: true,
+                                    src: Images?.First_View
+                                },
+                                largeImage: {
+                                    src: Images?.First_View,
+                                    width:  618,
+                                    height: 418,
+                                }
+                            }} />
+                            {/* <img src={Images?.First_View} alt="image" className="border md:border-r border-t-0 border-b-0 w-[36vw]" /> */}
                         </div>
 
                         <div className="lg:hidden">
-                            <div className="flex justify-center gap-4 mt-5 ">
+                            <div className="flex justify-center gap-4 ">
                                 <div><img src={Images?.First_View} alt="" className="w-12 h-12" /></div>
                                 <div><img src={Images?.Second_View} alt="" className="w-12 h-12" /></div>
                                 <div><img src={Images?.Group_View} alt="" className="w-12 h-12" /></div>
@@ -95,9 +109,9 @@ const DetailsPage = () => {
                         <ul className="grid grid-cols-2 md:grid-cols-3 pt-5 lg:pt-0 lg:mt-5 gap-5 lg:gap-0 lg:space-y-5">
                             <li className="flex items-center"><BiSolidMemoryCard className="text-3xl text-gray-500" /> <span className="text-xs">{Storage?.Internal[1]},
                                 {
-                                    Storage?.Expandable ? 
-                                    <span>{Storage?.Expandable}</span>
-                                    : <span className="text-red-600">Non Expandable</span>
+                                    Storage?.Expandable ?
+                                        <span>{Storage?.Expandable}</span>
+                                        : <span className="text-red-600">Non Expandable</span>
                                 }
                             </span></li>
 
@@ -127,6 +141,7 @@ const DetailsPage = () => {
             </div>
 
             <DetailsInfo details={details} />
+            <DetailsGallery />
         </div>
     );
 };

@@ -349,7 +349,6 @@ const DetailsInfo = ({ details }) => {
                         </li>
                     </ul>
                 </div>
-                <div className="py-3"><hr /></div>
             </section>
 
         </div>
