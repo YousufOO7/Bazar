@@ -4,7 +4,7 @@ import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 
 
-const DetailsGallery = () => {
+const DetailsSpecification = () => {
     const [value, setValue] = React.useState('one');
 
     const handleChange = (event, newValue) => {
@@ -150,4 +150,4 @@ const DetailsGallery = () => {
     );
 };
 
-export default DetailsGallery;
+export default DetailsSpecification;
