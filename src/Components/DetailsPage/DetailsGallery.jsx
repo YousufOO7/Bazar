@@ -29,6 +29,7 @@ const DetailsGallery = () => {
                 </Box>
             </div>
             <section className='border mt-5 px-5'>
+            <h2 className="text-2xl font-bold py-3 underline">Specification</h2>
                 <div className='border my-5 px-2'>
                     {/* brand */}
                     <div className='grid grid-cols-6'>

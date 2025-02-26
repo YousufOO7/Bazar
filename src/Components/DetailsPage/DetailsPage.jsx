@@ -2,6 +2,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from 'react-responsive-carousel';
 import { Link } from "react-router";
 import DetailsGallery from "./DetailsGallery";
+import DetailsDescription from "./DetailsDescription";
 
 
 
@@ -76,8 +77,8 @@ const DetailsPage = () => {
 
             </div>
 
-            {/* <DetailsInfo details={details} /> */}
             <DetailsGallery />
+            <DetailsDescription />
         </div>
     );
 };
