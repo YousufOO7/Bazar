@@ -47,7 +47,7 @@ const DetailsPage = () => {
                                 },
                                 largeImage: {
                                     src: Images?.First_View,
-                                    width:  618,
+                                    width:  218,
                                     height: 418,
                                 }
                             }} />
