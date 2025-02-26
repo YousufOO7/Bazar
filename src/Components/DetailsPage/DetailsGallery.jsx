@@ -1,59 +1,31 @@
-import { useEffect, useState } from "react";
-// Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
+import * as React from 'react';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import Box from '@mui/material/Box';
 
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-// import required modules
-import { Pagination, Navigation, Autoplay } from 'swiper/modules';
-
-import axios from "axios";
 
 const DetailsGallery = () => {
-    const [details, setDetails] = useState([]);
+    const [value, setValue] = React.useState('one');
 
-    useEffect(() => {
-        axios.get("./details.json")
-            .then(res => {
-                setDetails(res.data)
-            })
-    }, [])
-
-    const { Images } = details;
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
 
     return (
-        <div className="bg-white mt-10  max-w-6xl mx-auto px-4 lg:px-10">
-            <div className='w-full py-10'>
-                <Swiper
-                    slidesPerView={1}
-                    spaceBetween={30}
-                    loop={true}
-                    autoplay={{
-                        delay: 3000,
-                        disableOnInteraction: false,
-                    }}
-                    navigation={true}
-                    modules={[Pagination, Navigation, Autoplay]}
-                    className="mySwiper">
-                    <SwiperSlide>
-                        <div className="flex justify-center py-5">
-                            <img src={Images?.First_View} alt="" />
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="flex justify-center py-5">
-                            <img src={Images?.Second_View} alt="" />
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="flex justify-center py-5">
-                            <img src={Images?.Group_View} alt="" />
-                        </div>
-                    </SwiperSlide>
-                </Swiper>
-            </div>
+        <div className="bg-white mt-10  lg:px-16 px-4 ">
+            <Box sx={{ width: '100%' }}>
+                <Tabs
+                    value={value}
+                    onChange={handleChange}
+                    textColor="secondary"
+                    indicatorColor="secondary"
+                    aria-label="secondary tabs example"
+                >
+                    <Tab value="one" label="Specification" />
+                    <Tab value="two" label="Description" />
+                    <Tab value="three" label="Review" />
+                </Tabs>
+            </Box>
         </div>
     );
 };
