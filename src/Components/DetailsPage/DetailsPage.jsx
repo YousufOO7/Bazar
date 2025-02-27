@@ -9,27 +9,20 @@ import DetailsSpecification from "./DetailsSpecification";
 const DetailsPage = () => {
 
 
-
-
     return (
         <div className="bg-gray-200">
-            <div className="bg-white px-16 h-full py-5">
+            <div className="bg-white px-4 lg:px-16 h-full py-5">
                 {/* name and btn */}
                 <div className="flex justify-between my-2 px-4 md:px-6 lg:px-10">
                     <Link to="/">
                         <button className="px-2 md:px-4 py-1 text-xs md:text-[16px] border hover:bg-[#ff882a] hover:text-white border-[#ff882a]">Back To Home</button>
                     </Link>
-                    {/* <h2 className="text-[16px] md:text-2xl font-semibold">iPhone 16 Pro Max</h2> */}
-                    {/* <div className="flex space-x-4">
-                        <button className="px-2 md:px-4 py-1 text-xs md:text-[16px] border hover:bg-[#ff882a] hover:text-white border-[#ff882a]">Add To Cart</button>
-                        <button className="px-2 md:px-4 py-1 text-xs md:text-[16px] border hover:bg-[#ff882a] hover:text-white border-[#ff882a]">Add To Cart</button>
-                    </div> */}
                 </div>
 
                 <div className="mt-10"><hr /></div>
                 {/* ph image */}
                 <section className="md:flex">
-                    <div className="flex justify-center md:flex-col py-2  w-2/6 md:h-[72vh]">
+                    <div className="flex justify-center md:flex-col py-2 w-full px-5 md:px-0 md:w-2/6 md:h-[72vh] ">
                         <Carousel>
                             <div>
                                 <img src="https://adminapi.applegadgetsbd.com/storage/media/large/iPhone-16-Pro-Max---16-Pro-Desert-Titanium-1929.jpg" alt="" />
