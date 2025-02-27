@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 import DetailsDescription from "./DetailsDescription";
 import DetailsSpecification from "./DetailsSpecification";
-
+import ReactImageMagnify from 'react-image-magnify';
 
 const DetailsPage = () => {
 
@@ -20,14 +20,30 @@ const DetailsPage = () => {
                 {/* ph image */}
                 <section className="md:flex gap-5">
                     <div className="md:flex justify-center md:flex-col py-2 w-full px-5 md:px-0 md:w-2/6 md:h-[72vh]">
-                        <div className="w-full lg:-mt-20">
-                            <img src="https://adminapi.applegadgetsbd.com/storage/media/large/iPhone-16-Pro-Max---16-Pro-Desert-Titanium-1929.jpg" alt="" />
+                    {/* main image hidden only sm device */}
+                        <div className="w-full hidden md:block lg:-mt-10">
+                            <ReactImageMagnify {...{
+                                smallImage: {
+                                    alt: 'Wristwatch by Ted Baker London',
+                                    isFluidWidth: true,
+                                    src: "https://adminapi.applegadgetsbd.com/storage/media/large/iPhone-16-Pro-Max---16-Pro-Desert-Titanium-1929.jpg"
+                                },
+                                largeImage: {
+                                    src: "https://adminapi.applegadgetsbd.com/storage/media/large/iPhone-16-Pro-Max---16-Pro-Desert-Titanium-1929.jpg",
+                                    width: 518,
+                                    height: 518
+                                }
+                            }} />
                         </div>
-
-                            <div className="flex gap-4 justify-center">
-                                <img src="https://adminapi.applegadgetsbd.com/storage/media/large/iPhone-16-Pro-Max---16-Pro-Desert-Titanium-1929.jpg" className="w-20 h-20 border lg:-mt-10" alt="" />
-                                <img src="https://adminapi.applegadgetsbd.com/storage/media/large/iPhone-16-Pro-Max---16-Pro-Desert-Titanium-1929.jpg" className="w-20 h-20 border lg:-mt-10" alt="" />
+                        {/* main image show only sm device */}
+                            <div className="md:hidden">
+                                <img src="https://adminapi.applegadgetsbd.com/storage/media/large/iPhone-16-Pro-Max---16-Pro-Desert-Titanium-1929.jpg" alt="" />
                             </div>
+
+                        <div className="flex gap-4 justify-center mt-10">
+                            <img src="https://adminapi.applegadgetsbd.com/storage/media/large/iPhone-16-Pro-Max---16-Pro-Desert-Titanium-1929.jpg" className="w-20 h-20 border lg:-mt-10" alt="" />
+                            <img src="https://adminapi.applegadgetsbd.com/storage/media/large/iPhone-16-Pro-Max---16-Pro-Desert-Titanium-1929.jpg" className="w-20 h-20 border lg:-mt-10" alt="" />
+                        </div>
 
                     </div>
 
