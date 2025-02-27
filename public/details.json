@@ -1,119 +1,45 @@
-{
-    "id": 1001,
-    "name": "Samsung Galaxy A35 5G",
-    "Images": {
-      "First_View": "https://www.91-img.com/pictures/166095-v1-iqoo-neo-10-pro-mobile-phone-large-1.jpg",
-      "Second_View": "https://www.91-img.com/pictures/166095-v1-iqoo-neo-10-pro-mobile-phone-large-2.jpg",
-      "Group_View": "https://www.91-img.com/pictures/166095-v1-iqoo-neo-10-pro-mobile-phone-large-3.jpg"
-    },
-    "Key_Specs": {
-      "Display": "6.6-inch Super AMOLED, 1080 x 2340 pixels, 120Hz refresh rate",
-      "Processor": "Exynos 1380 (5 nm)",
-      "RAM": "6GB / 8GB / 12GB",
-      "Storage": "128GB / 256GB, expandable via microSDXC",
-      "Rear_Camera": "50MP (wide) + 8MP (ultrawide) + 5MP (macro)",
-      "Front_Camera": "13MP",
-      "Battery": "5000mAh with 25W fast charging",
-      "OS": "Android 14 with One UI 6.1",
-      "fiveG_Support": "True"
-    },
-    "General": {
-      "OperatingSystem": "Android v14",
-      "Brand": "Samsung",
-      "Model": "Galaxy A35 5G",
-      "Release_Date": "March 15, 2024",
-      "Dimensions": "161.7 x 78.0 x 8.2 mm",
-      "Weight": "209g",
-      "Colors": ["Awesome Iceblue", "Lilac", "Navy", "Lemon"],
-      "Price": "$369"
-    },
-    "Performance": {
-      "Chipset": "Exynos 1380 (5 nm)",
-      "CPU": "Octa-core (4x2.4 GHz Cortex-A78 & 4x2.0 GHz Cortex-A55)",
-      "GPU": "Mali-G68 MP5",
-      "RAM": ["6GB", "8GB", "12GB"],
-      "Software": "Android 14 with One UI 6.1",
-      "Software_Updates": "Up to 4 major Android upgrades"
-    },
-    "Display": {
-      "Type": "Super AMOLED",
-      "Size": "6.6 inches",
-      "Resolution": "1080 x 2340 pixels",
-      "Aspect_Ratio": "19.5:9",
-      "Pixel_Density": "390 ppi",
-      "Refresh_Rate": "120Hz",
-      "Brightness": "1000 nits (HBM)",
-      "Protection": "Corning Gorilla Glass Victus+",
-      "Features": "Always-on display",
-      "Fingerprint_Sensor": "Under-display, optical",
-      "Image": "https://example.com/images/galaxy_a35_5g_display.jpg"
-    },
-    "Design": {
-      "Dimensions": "161.7 x 78.0 x 8.2 mm",
-      "Weight": "209g",
-      "Build": "Plastic back, plastic frame",
-      "Colors": ["Awesome Iceblue", "Lilac", "Navy", "Lemon"],
-      "Water_Resistance": "IP67 dust/water resistant (up to 1m for 30 min)",
-      "Image": "https://example.com/images/galaxy_a35_5g_design.jpg"
-    },
-    "Camera": {
-      "Rear_Camera": {
-        "Triple": [
-          {
-            "Sensor": "50 MP",
-            "Aperture": "f/1.8",
-            "Features": ["PDAF", "OIS", "Primary Camera"]
-          },
-          {
-            "Sensor": "8 MP",
-            "Aperture": "f/2.2",
-            "Features": ["123˚ ultrawide"]
-          },
-          {
-            "Sensor": "5 MP",
-            "Aperture": "f/2.4",
-            "Features": ["macro"]
-          }
-        ],
-        "Video": ["4K@30fps", "1080p@30/60fps", "gyro-EIS"],
-        "Image": "8192 x 6144 pixels"
-      },
-      "Front_Camera": {
-        "Single": {
-          "Sensor": "13 MP",
-          "Aperture": "f/2.2"
+[
+    {
+        "Product_Code": "IPH16PM",
+        "Category": "Apple",
+        "Brand": "Apple",
+        "Model": "iPhone 16 Pro Max",
+        "Network": "GSM / CDMA / HSPA / EVDO / LTE / 5G",
+        "Dimension": "163 x 77.6 x 8.3 mm",
+        "Weight": "227 g",
+        "SIM": "Nano-SIM and eSIM - International | Dual eSIM with multiple numbers - USA | Dual SIM (Nano-SIM, dual stand-by) - China",
+        "Display_Type": "LTPO Super Retina XDR OLED, 120Hz, HDR10, Dolby Vision, 1000 nits (typ), 2000 nits (HBM)",
+        "Display_Size": "6.9 inches",
+        "Display_Resolution": "1320 x 2868 pixels",
+        "OS": "iOS 18",
+        "Chipset": "Apple A18 Pro (3 nm)",
+        "CPU": "Hexa-core",
+        "Storage": ["6 / 128GB", "6 / 256GB", "8 / 512GB", "8 / 1TB"],
+        "Main_Camera": "48 MP (wide) | 12 MP (periscope telephoto) | 48 MP (ultrawide) | TOF 3D LiDAR scanner",
+        "Front_Camera": "12 MP (wide) | SL 3D (depth/biometrics sensor)",
+        "Sound": "Stereo Loudspeakers",
+        "Battery_Info": "Li-Ion, non-removable | USB Type-C 3.2 Gen 2, DisplayPort | 25W wireless (MagSafe)",
+        "Sensors": "Face ID, accelerometer, gyro, proximity, compass, barometer",
+        "Other_Features": "Glass front (Corning-made), glass back (Corning-made), titanium frame | IP68 dust/water resistant | Always on Display",
+        "Cash_Discount_Price": 1299,
+        "In_Stock": "Available",
+        "Rating": 4.8,
+        "Images": {
+          "Main_Image": "https://adminapi.applegadgetsbd.com/storage/media/large/iPhone-16-Pro-Max---16-Pro-Desert-Titanium-1929.jpg",
+          "Image_One": "https://adminapi.applegadgetsbd.com/storage/media/large/iPhone-16-Pro-Max---16-Pro-Desert-Titanium-1929.jpg",
+          "Image_Two": "https://adminapi.applegadgetsbd.com/storage/media/large/iPhone-16-Pro-Max---16-Pro-Desert-Titanium-1929.jpg",
+          "Image_Three": "https://adminapi.applegadgetsbd.com/storage/media/large/iPhone-16-Pro-Max---16-Pro-Desert-Titanium-1929.jpg"
         },
-        "Video": ["4K@30fps", "1080p@30fps"],
-        "Image": "4160 x 3120 pixels."
+        "Description": {
+          "Description_Image": "https://adminapi.applegadgetsbd.com/storage/media/large/iPhone-16-Pro-Max---16-Pro-Description-1603.jpg",
+          "Description_Title_One": "Experience Innovation with the iPhone 16 Pro Max",
+          "Description_Title_Two": "A18 Pro Chip - Power Like Never Before",
+          "Description_Title_Three": "Enjoy a seamless 120Hz refresh rate on the 6.9-inch OLED screen, providing ultra-smooth scrolling and breathtaking visuals.",
+          "Description_Text_One": "The iPhone 16 Pro Max redefines smartphone technology with its powerful A18 Pro chip, stunning 6.9-inch Super Retina XDR display, and advanced camera system. Built with a titanium frame, it offers unparalleled durability while maintaining a sleek design. The upgraded battery life ensures you stay connected all day. With 5G connectivity and iOS 18, enjoy the smoothest and fastest user experience yet.",
+          "Description_Text_Two": "The iPhone 16 Pro Max redefines smartphone technology with its powerful A18 Pro chip, stunning 6.9-inch Super Retina XDR display, and advanced camera system. Built with a titanium frame, it offers unparalleled durability while maintaining a sleek design. The upgraded battery life ensures you stay connected all day. With 5G connectivity and iOS 18, enjoy the smoothest and fastest user experience yet.",
+          "Description_Text_Three": "The iPhone 16 Pro Max redefines smartphone technology with its powerful A18 Pro chip, stunning 6.9-inch Super Retina XDR display, and advanced camera system. Built with a titanium frame, it offers unparalleled durability while maintaining a sleek design. The upgraded battery life ensures you stay connected all day. With 5G connectivity and iOS 18, enjoy the smoothest and fastest user experience yet."
+        }
       }
-    },
-    "Battery": {
-      "Capacity": "5000mAh",
-      "Type": "Li-Ion, non-removable",
-      "Charging": "25W wired fast charging",
-      "Battery_Life": "Up to 2 days on a single charge",
-      "Image": "https://example.com/images/galaxy_a35_5g_battery.jpg"
-    },
-    "Storage": {
-      "Internal": ["128GB", "256GB"],
-      "Expandable": "microSDXC, up to 1TB",
-      "Image": "https://example.com/images/galaxy_a35_5g_storage.jpg"
-    },
-    "Network_Connectivity": {
-      "SIM": "Single SIM (Nano-SIM) or Hybrid Dual SIM (Nano-SIM, dual stand-by)",
-      "Network_Types": ["GSM", "HSPA", "LTE", "5G"],
-      "Wi_Fi": ["Wi-Fi 802.11 a/b/g/n/ac/6", "dual-band", "Wi-Fi Direct"],
-      "Bluetooth": "5.3, A2DP, LE",
-      "GPS": ["GPS", "GALILEO", "GLONASS", "BDS", "QZSS"],
-      "NFC": "true",
-      "USB": "USB Type-C 2.0, OTG",
-      "Image": "https://example.com/images/galaxy_a35_5g_connectivity.jpg"
-    },
-    "Multimedia": {
-      "Loudspeaker": "Yes, with stereo speakers",
-      "mm_Jack": "false",
-      "Image": "https://example.com/images/galaxy_a35_5g_multimedia.jpg"
-    },
-    "Sensors": ["Fingerprint (under display, optical)", "accelerometer", "gyro", "compass"]
-  }
+      
+  ]
   
