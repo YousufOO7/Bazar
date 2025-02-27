@@ -1,9 +1,6 @@
-import "react-responsive-carousel/lib/styles/carousel.min.css"; 
-import { Carousel } from 'react-responsive-carousel';
 import { Link } from "react-router";
 import DetailsDescription from "./DetailsDescription";
 import DetailsSpecification from "./DetailsSpecification";
-
 
 
 const DetailsPage = () => {
@@ -21,22 +18,16 @@ const DetailsPage = () => {
 
                 <div className="mt-10"><hr /></div>
                 {/* ph image */}
-                <section className="md:flex">
-                    <div className="flex justify-center md:flex-col py-2 w-full px-5 md:px-0 md:w-2/6 md:h-[72vh] ">
-                        <Carousel>
-                            <div>
-                                <img src="https://adminapi.applegadgetsbd.com/storage/media/large/iPhone-16-Pro-Max---16-Pro-Desert-Titanium-1929.jpg" alt="" />
+                <section className="md:flex gap-5">
+                    <div className="md:flex justify-center md:flex-col py-2 w-full px-5 md:px-0 md:w-2/6 md:h-[72vh]">
+                        <div className="w-full lg:-mt-20">
+                            <img src="https://adminapi.applegadgetsbd.com/storage/media/large/iPhone-16-Pro-Max---16-Pro-Desert-Titanium-1929.jpg" alt="" />
+                        </div>
+
+                            <div className="flex gap-4 justify-center">
+                                <img src="https://adminapi.applegadgetsbd.com/storage/media/large/iPhone-16-Pro-Max---16-Pro-Desert-Titanium-1929.jpg" className="w-20 h-20 border lg:-mt-10" alt="" />
+                                <img src="https://adminapi.applegadgetsbd.com/storage/media/large/iPhone-16-Pro-Max---16-Pro-Desert-Titanium-1929.jpg" className="w-20 h-20 border lg:-mt-10" alt="" />
                             </div>
-                            <div>
-                                <img src="https://adminapi.applegadgetsbd.com/storage/media/large/iPhone-16-Pro-Max---16-Pro-Black-Titanium-2734.jpg" alt="" />
-                            </div>
-                            <div>
-                                <img src="https://adminapi.applegadgetsbd.com/storage/media/large/iPhone-16-Pro-Max---16-Pro-Black-Titanium-2734.jpg" alt="" />
-                            </div>
-                            <div>
-                                <img src="https://adminapi.applegadgetsbd.com/storage/media/large/iPhone-16-Pro-Max---16-Pro-Black-Titanium-2734.jpg" alt="" />
-                            </div>
-                        </Carousel>
 
                     </div>
 
