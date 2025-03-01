@@ -41,13 +41,13 @@ const Navbar = () => {
                 {/* text and icons */}
                 <div className="hidden lg:block w-1/2">
                     <div className="flex justify-between gap-10">
-                        <div className="flex items-center">
-                           <Link to="/dashboard"> <div><img src="https://www.applegadgetsbd.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgift.347df468.png&w=32&q=75" alt="" /></div></Link>
+                    <Link to="/dashboard"> <div className="flex items-center">
+                            <div><img src="https://www.applegadgetsbd.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgift.347df468.png&w=32&q=75" alt="" /></div>
                             <div>
                                 <h4 className="text-bold text-[16px]">Offers</h4>
                                 <p className="text-semibold text-xs">Latest Offer</p>
                             </div>
-                        </div>
+                        </div></Link>
                         {/* shop */}
                         <div className="flex items-center">
                             <div><img src="https://www.applegadgetsbd.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcart.c2e800a4.png&w=32&q=75" alt="" /></div>
