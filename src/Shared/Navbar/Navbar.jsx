@@ -1,4 +1,5 @@
 import { FaSearch } from "react-icons/fa";
+import { Link } from "react-router";
 
 
 const Navbar = () => {
@@ -41,7 +42,7 @@ const Navbar = () => {
                 <div className="hidden lg:block w-1/2">
                     <div className="flex justify-between gap-10">
                         <div className="flex items-center">
-                            <div><img src="https://www.applegadgetsbd.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgift.347df468.png&w=32&q=75" alt="" /></div>
+                           <Link to="/dashboard"> <div><img src="https://www.applegadgetsbd.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgift.347df468.png&w=32&q=75" alt="" /></div></Link>
                             <div>
                                 <h4 className="text-bold text-[16px]">Offers</h4>
                                 <p className="text-semibold text-xs">Latest Offer</p>
