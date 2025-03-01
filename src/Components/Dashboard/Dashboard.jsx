@@ -6,12 +6,18 @@ import { NavLink, Outlet } from "react-router";
 
 const Dashboard = () => {
     return (
-        <div className="flex bg-pink-50">
-        <div className="md:w-72 min-h-screen bg-orange-200">
+        <div className="flex bg-gray-200">
+        <div className="w-32 overflow-hidden md:w-52 lg:w-72 min-h-screen bg-orange-200">
             <ul className="menu py-5">
 
                 {
                      <>
+                        <li>
+                            <NavLink to="/dashboard/addProduct">
+                                <MdPreview></MdPreview>
+                                Product Management
+                            </NavLink>
+                        </li>
                         <li>
                             <NavLink to="/dashboard/statistic">
                                 <MdPreview></MdPreview>
@@ -45,7 +51,7 @@ const Dashboard = () => {
         </div>
 
         {/* dashboard main */}
-        <div className="w-full flex-1 max-w-4xl mx-auto">
+        <div className="w-full flex-1 max-w-5xl mx-auto">
             <Outlet></Outlet>
         </div>
     </div>

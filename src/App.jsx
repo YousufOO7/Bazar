@@ -3,6 +3,7 @@ import Home from "./Components/Home/Home"
 import Root from "./Components/Root/Root"
 import DetailsPage from "./Components/DetailsPage/DetailsPage"
 import Dashboard from "./Components/Dashboard/Dashboard"
+import AddProductsByAdmin from "./Components/Dashboard/AddProductsByAdmin/AddProductsByAdmin"
 
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
 
           {/* dashboard */}
           <Route path="/dashboard" element={<Dashboard></Dashboard>}>
-
+            <Route path="addProduct" element={<AddProductsByAdmin />}></Route>
           </Route>
         </Routes>
       </div>
