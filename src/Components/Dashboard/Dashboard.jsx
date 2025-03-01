@@ -2,12 +2,16 @@ import { FaHome, FaUsers } from "react-icons/fa";
 import { MdPreview } from "react-icons/md";
 import { RiCoupon2Fill } from "react-icons/ri";
 import { NavLink, Outlet } from "react-router";
+import DashboardDrawer from "./DashboardDrawer/DashboardDrawer";
 
 
 const Dashboard = () => {
     return (
-        <div className="flex bg-gray-200">
-        <div className="w-32 overflow-hidden md:w-52 lg:w-72 min-h-screen bg-orange-200">
+        <div className="md:flex bg-gray-200">
+            <div className="md:hidden">
+                <DashboardDrawer />
+            </div>
+        <div className="md:w-52 lg:w-72 min-h-screen bg-orange-200 hidden md:block">
             <ul className="menu py-5">
 
                 {

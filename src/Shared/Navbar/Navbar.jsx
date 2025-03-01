@@ -30,7 +30,7 @@ const Navbar = () => {
                 </div>
                 {/* image and search */}
                 <div className="flex items-center gap-10 w-full lg:w-1/2">
-                    <img src="https://www.applegadgetsbd.com/_next/image?url=https%3A%2F%2Fadminapi.applegadgetsbd.com%2Fstorage%2Fmedia%2Fcommon%2Flogo.png&w=256&q=75" className="w-32 md:w-40" alt="image" />
+                    <Link to="/"><img src="https://www.applegadgetsbd.com/_next/image?url=https%3A%2F%2Fadminapi.applegadgetsbd.com%2Fstorage%2Fmedia%2Fcommon%2Flogo.png&w=256&q=75" className="w-32 md:w-40" alt="image" /></Link>
 
                     <div className="relative w-full">
                         <input type="text" placeholder="Search Here" className="w-full px-4 py-2 rounded-full text-black" />
@@ -57,13 +57,13 @@ const Navbar = () => {
                             </div>
                         </div>
                         {/* pre order */}
-                        <div className="flex items-center">
+                       <Link to="/allProducts"> <div className="flex items-center">
                             <div><img src="https://www.applegadgetsbd.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fshop.638fa252.png&w=32&q=75" alt="" /></div>
                             <div>
                                 <h4 className="text-bold text-[16px]">Pre-Order</h4>
                                 <p className="text-semibold text-xs">Order Today</p>
                             </div>
-                        </div>
+                        </div></Link>
                         {/* Account */}
                         <div className="flex items-center">
                             <div><img src="https://www.applegadgetsbd.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fuser.4115a831.png&w=32&q=75" alt="" /></div>

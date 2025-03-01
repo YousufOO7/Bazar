@@ -4,6 +4,7 @@ import Root from "./Components/Root/Root"
 import DetailsPage from "./Components/DetailsPage/DetailsPage"
 import Dashboard from "./Components/Dashboard/Dashboard"
 import AddProductsByAdmin from "./Components/Dashboard/AddProductsByAdmin/AddProductsByAdmin"
+import AllProducts from "./Components/AllProducts/AllProducts"
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<Root></Root>} >
             <Route index element={<Home></Home>}></Route>
             <Route path="details" element={<DetailsPage />}></Route>
+            <Route path="allProducts" element={<AllProducts />}></Route>
           </Route>
 
           {/* dashboard */}
