@@ -49,13 +49,13 @@ const Navbar = () => {
                             </div>
                         </div></Link>
                         {/* shop */}
-                        <div className="flex items-center">
+                       <Link to="tab"> <div className="flex items-center">
                             <div><img src="https://www.applegadgetsbd.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcart.c2e800a4.png&w=32&q=75" alt="" /></div>
                             <div>
                                 <h4 className="text-bold text-[16px]">Cart <span>(0)</span></h4>
                                 <p className="text-semibold text-xs">Add Items</p>
                             </div>
-                        </div>
+                        </div></Link>
                         {/* pre order */}
                        <Link to="/allProducts"> <div className="flex items-center">
                             <div><img src="https://www.applegadgetsbd.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fshop.638fa252.png&w=32&q=75" alt="" /></div>

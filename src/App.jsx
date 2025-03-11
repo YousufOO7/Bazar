@@ -5,6 +5,9 @@ import DetailsPage from "./Components/DetailsPage/DetailsPage"
 import Dashboard from "./Components/Dashboard/Dashboard"
 import AddProductsByAdmin from "./Components/Dashboard/AddProductsByAdmin/AddProductsByAdmin"
 import AllProducts from "./Components/AllProducts/AllProducts"
+import Login from "./Social/Login/Login"
+import Tab from "./Social/Tab/AuthTabs"
+import AuthTabs from "./Social/Tab/AuthTabs"
 
 
 function App() {
@@ -17,6 +20,7 @@ function App() {
             <Route index element={<Home></Home>}></Route>
             <Route path="details" element={<DetailsPage />}></Route>
             <Route path="allProducts" element={<AllProducts />}></Route>
+            <Route path="tab" element={<AuthTabs />}></Route>
           </Route>
 
           {/* dashboard */}
