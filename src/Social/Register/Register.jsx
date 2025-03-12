@@ -2,12 +2,15 @@ import { TextField, Button, Card, CardContent, Typography } from '@mui/material'
 import useAuth from '../../Hooks/useAuth';
 import { toast } from 'react-toastify';
 import { useLocation, useNavigate } from 'react-router';
+import GoogleLogin from '../../Shared/GoogleLogin/GoogleLogin';
+import useAxiosPublic from '../../Hooks/useAxiosPublic';
 
 const Register = () => {
 
     const { createNewUser, setUser, updateUserProfile } = useAuth();
     const navigate = useNavigate();
     const location = useLocation();
+    const axiosPublic = useAxiosPublic();
 
     const registerSubmit = e => {
         e.preventDefault();
@@ -24,9 +27,16 @@ const Register = () => {
                 const user = result.user;
                 setUser(user);
                 updateUserProfile({ displayName: name, photoURL: image })
-                    .then(() => {
-                        navigate(location?.state ? location.state : '/')
-                        toast.success('Register successfully  done!')
+                const userInfo = {
+                    name: user?.displayName,
+                    email: user?.email,
+                }
+                axiosPublic.post("/users", userInfo)
+                    .then(res => {
+                        if (res.data.insertedId) {
+                            navigate(location?.state ? location.state : '/')
+                            toast.success('Register successfully  done!')
+                        }
                     })
                     .catch(error => {
                         toast.error('Something was wrong make sure your info in right or not')
@@ -106,6 +116,7 @@ const Register = () => {
                         >
                             Register
                         </Button>
+                        <GoogleLogin />
                     </form>
                 </CardContent>
             </Card>

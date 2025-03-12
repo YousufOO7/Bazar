@@ -1,18 +1,20 @@
 import { useEffect, useState } from "react";
 import TitleShared from "../../../Shared/TitleShared/TitleShared";
-import axios from "axios";
+import useAxiosPublic from "../../../Hooks/useAxiosPublic";
 
 
 const NewArrive = () => {
 
     const [newArrive, setNewArrive] = useState([]);
 
-    useEffect(() => {
-        axios.get("./newArrive.json")
-            .then(res => {
-                setNewArrive(res.data)
-            })
-    }, [])
+    const axiosPublic = useAxiosPublic();
+
+    useEffect( () => {
+        axiosPublic.get("/new-arrive")
+        .then(res => {
+            setNewArrive(res.data)
+        })
+    } ,[axiosPublic])
 
     return (
         <div>
