@@ -1,19 +1,40 @@
 import { TextField, Button, Card, CardContent, Typography } from '@mui/material';
+import useAuth from '../../Hooks/useAuth';
+import { toast } from 'react-toastify';
+import { useLocation, useNavigate } from 'react-router';
 
 const Register = () => {
+
+    const { createNewUser, setUser, updateUserProfile } = useAuth();
+    const navigate = useNavigate();
+    const location = useLocation();
 
     const registerSubmit = e => {
         e.preventDefault();
 
         const form = e.target;
-        const formDataObj = {
-            name: form.name.value,
-            image: form.image.value,
-            email: form.email.value,
-            password: form.password.value
-        }
+        const name = form.name.value
+        const image = form.image.value
+        const email = form.email.value
+        const password = form.password.value
 
-        console.log(formDataObj)
+        // create user
+        createNewUser(email, password)
+            .then(result => {
+                const user = result.user;
+                setUser(user);
+                updateUserProfile({ displayName: name, photoURL: image })
+                    .then(() => {
+                        navigate(location?.state ? location.state : '/')
+                        toast.success('Register successfully  done!')
+                    })
+                    .catch(error => {
+                        toast.error('Something was wrong make sure your info in right or not')
+                    })
+            })
+            .catch((error) => {
+                toast.error('Something was wrong make sure your info in right or not')
+            });
 
     }
 

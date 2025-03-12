@@ -1,8 +1,12 @@
 import { FaSearch } from "react-icons/fa";
 import { Link } from "react-router";
+import useAuth from "../../Hooks/useAuth";
 
 
 const Navbar = () => {
+
+    const { user, Logout } = useAuth();
+
     return (
         <div className="bg-[black] text-white py-4 px-2 md:px-5 lg:px-10">
             <div className="flex items-center gap-5 justify-between">
@@ -40,8 +44,8 @@ const Navbar = () => {
 
                 {/* text and icons */}
                 <div className="hidden lg:block w-1/2">
-                    <div className="flex justify-between gap-10">
-                    <Link to="/dashboard"> <div className="flex items-center">
+                    <div className="flex justify-between gap-5">
+                        <Link to="/dashboard"> <div className="flex items-center">
                             <div><img src="https://www.applegadgetsbd.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgift.347df468.png&w=32&q=75" alt="" /></div>
                             <div>
                                 <h4 className="text-bold text-[16px]">Offers</h4>
@@ -49,15 +53,15 @@ const Navbar = () => {
                             </div>
                         </div></Link>
                         {/* shop */}
-                       <Link to="tab"> <div className="flex items-center">
+                        <div className="flex items-center">
                             <div><img src="https://www.applegadgetsbd.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcart.c2e800a4.png&w=32&q=75" alt="" /></div>
                             <div>
                                 <h4 className="text-bold text-[16px]">Cart <span>(0)</span></h4>
                                 <p className="text-semibold text-xs">Add Items</p>
                             </div>
-                        </div></Link>
+                        </div>
                         {/* pre order */}
-                       <Link to="/allProducts"> <div className="flex items-center">
+                        <Link to="/allProducts"> <div className="flex items-center">
                             <div><img src="https://www.applegadgetsbd.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fshop.638fa252.png&w=32&q=75" alt="" /></div>
                             <div>
                                 <h4 className="text-bold text-[16px]">Pre-Order</h4>
@@ -65,12 +69,20 @@ const Navbar = () => {
                             </div>
                         </div></Link>
                         {/* Account */}
-                        <div className="flex items-center">
+                        <Link to="tab"> <div className="flex items-center">
                             <div><img src="https://www.applegadgetsbd.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fuser.4115a831.png&w=32&q=75" alt="" /></div>
                             <div>
                                 <h4 className="text-bold text-[16px]">Account</h4>
                                 <p className="text-semibold text-xs">Register Login</p>
                             </div>
+                        </div></Link>
+
+                        {/* log out */}
+                        <div>
+                            {
+                                user && user?.email ? <Link to="/"><button onClick={Logout} className="btn btn-sm btn-error text-white">Log-Out</button></Link> : <Link to="tab" className="btn btn-sm">Login</Link>
+
+                            }
                         </div>
                     </div>
                 </div>

@@ -28,10 +28,10 @@ const Feature = () => {
                     features.map(item => (
                         <Link to="details"><div key={item.id} className="group bg-gray-200 px-2 py-5 rounded-xl">
                             <div className="flex justify-center">
-                                <img src={item.image} alt="" className="w-20" />
+                                <img src={item?.image} alt="" className="w-20" />
                             </div>
                             <div className="flex justify-center">
-                                <p className="group-hover:text-[#FF882A]">{item.category}</p>
+                                <p className="group-hover:text-[#FF882A]">{item?.category}</p>
                             </div>
                         </div>
                         </Link>
