@@ -2,6 +2,7 @@ import { TextField, Button, Card, CardContent, Typography } from '@mui/material'
 import useAuth from '../../Hooks/useAuth';
 import { useLocation, useNavigate } from 'react-router';
 import { toast } from 'react-toastify';
+import GoogleLogin from '../../Shared/GoogleLogin/GoogleLogin';
 
 const Login = () => {
 
@@ -74,6 +75,7 @@ const Login = () => {
                         >
                             Sign In
                         </Button>
+                        <GoogleLogin />
                     </form>
                 </CardContent>
             </Card>

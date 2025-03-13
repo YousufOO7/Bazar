@@ -3,11 +3,12 @@ import { MdPreview } from "react-icons/md";
 import { RiCoupon2Fill } from "react-icons/ri";
 import { NavLink, Outlet } from "react-router";
 import DashboardDrawer from "./DashboardDrawer/DashboardDrawer";
+import useAdmin from "../../Hooks/useAdmin";
 
 
 const Dashboard = () => {
 
-    const isAdmin = true;
+    const [isAdmin] = useAdmin();
 
     return (
         <div className="md:flex bg-gray-200">
