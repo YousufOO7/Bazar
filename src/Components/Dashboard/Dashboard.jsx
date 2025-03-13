@@ -6,41 +6,49 @@ import DashboardDrawer from "./DashboardDrawer/DashboardDrawer";
 
 
 const Dashboard = () => {
+
+    const isAdmin = true;
+
     return (
         <div className="md:flex bg-gray-200">
             <div className="md:hidden">
                 <DashboardDrawer />
             </div>
-        <div className="md:w-52 lg:w-72 min-h-screen bg-orange-200 hidden md:block">
+        <div className="md:w-52 lg:w-72 min-h-screen bg-[#eb914c] hidden md:block">
             <ul className="menu py-5">
 
                 {
-                     <>
-                        <li>
-                            <NavLink to="/dashboard/addProduct">
-                                <MdPreview></MdPreview>
-                                Product Management
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/dashboard/statistic">
-                                <MdPreview></MdPreview>
-                                Statistics
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/dashboard/manageUsers">
-                                <FaUsers></FaUsers>
-                                Manage Users
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/dashboard/manageCoupon">
-                                <RiCoupon2Fill></RiCoupon2Fill>
-                                Manage Coupon
-                            </NavLink>
-                        </li>
-                    </>
+                    isAdmin ? 
+                    <>
+                    <li>
+                        <NavLink to="/dashboard/addProduct">
+                            <MdPreview></MdPreview>
+                            Product Management
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/dashboard/statistic">
+                            <MdPreview></MdPreview>
+                            Statistics
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/dashboard/manageUsers">
+                            <FaUsers></FaUsers>
+                            Manage Users
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/dashboard/manageCoupon">
+                            <RiCoupon2Fill></RiCoupon2Fill>
+                            Manage Coupon
+                        </NavLink>
+                    </li>
+                </>
+                :
+                <>
+                
+                </>
                 }
             </ul>
             <div className="divider"></div>

@@ -5,8 +5,6 @@ import DetailsPage from "./Components/DetailsPage/DetailsPage"
 import Dashboard from "./Components/Dashboard/Dashboard"
 import AddProductsByAdmin from "./Components/Dashboard/AddProductsByAdmin/AddProductsByAdmin"
 import AllProducts from "./Components/AllProducts/AllProducts"
-import Login from "./Social/Login/Login"
-import Tab from "./Social/Tab/AuthTabs"
 import AuthTabs from "./Social/Tab/AuthTabs"
 import ManageUser from "./Components/AdminDashboard/ManageUser/ManageUser"
 
