@@ -17,7 +17,10 @@ const AddBluetoothByAdmin = () => {
             weight: form.weight.value,
             dimension: form.dimension.value,
             playTime: form.playTime.value,
-            otherFeatures: form.otherFeatures.value
+            otherFeatures: form.otherFeatures.value,
+            inStock: form.inStock.value,
+            mainImage: form.mainImage.value,
+            cashDiscountPrice: form.cashDiscountPrice.value
         }
 
         try {
@@ -152,6 +155,43 @@ const AddBluetoothByAdmin = () => {
                             margin="dense"
                         />
                     </div>
+
+                    <div className='md:flex justify-between gap-3'>
+                            {/* In stock */}
+                            <TextField
+                                label="In stock"
+                                type="text"
+                                name='inStock'
+                                fullWidth
+                                required
+                                variant="outlined"
+                                margin="dense"
+                            />
+
+                            {/* Cash discount price */}
+                            <TextField
+                                label="Cash Discount Price:"
+                                type="text"
+                                name='cashDiscountPrice'
+                                fullWidth
+                                required
+                                variant="outlined"
+                                margin="dense"
+                            />
+                        </div>
+
+                        <div className='md:flex justify-between gap-3'>
+                            {/* Main Image */}
+                            <TextField
+                                label="Main Image"
+                                type="url"
+                                name='mainImage'
+                                fullWidth
+                                required
+                                variant="outlined"
+                                margin="dense"
+                            />
+                        </div>
 
 
                     <div className='mt-3'>
