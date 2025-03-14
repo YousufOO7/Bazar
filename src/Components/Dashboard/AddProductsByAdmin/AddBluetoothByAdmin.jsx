@@ -1,8 +1,11 @@
 import { TextField, Button, Card, CardContent, Typography } from '@mui/material';
+import useAxiosSecure from '../../../Hooks/useAxiosSecure';
+import Swal from 'sweetalert2';
 
 const AddBluetoothByAdmin = () => {
+    const axiosSecure = useAxiosSecure();
 
-    const handleSubmit = e => {
+    const handleSubmit = async e => {
         e.preventDefault();
 
         const form = e.target;
@@ -17,7 +20,25 @@ const AddBluetoothByAdmin = () => {
             otherFeatures: form.otherFeatures.value
         }
 
-        console.log(addBluetoothData);
+        try {
+            const res = await axiosSecure.post("/addBluetooth", addBluetoothData);
+            if(res.data.insertedId){
+                form.reset()
+                Swal.fire({
+                    title: "Success!",
+                    text: "Bluetooth device has been added successfully.",
+                    icon: "success"
+                });
+            }
+        
+        } catch (error) {
+            Swal.fire({
+                title: "Error!",
+                text: "Something went wrong while adding the Bluetooth device.",
+                icon: "error"
+            });
+        }
+        
     }
 
     return (

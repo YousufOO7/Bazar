@@ -1,8 +1,11 @@
 import { TextField, Button, Card, CardContent, Typography } from '@mui/material';
+import Swal from 'sweetalert2';
+import useAxiosSecure from '../../../Hooks/useAxiosSecure';
 
 const AddLaptopByAdmin = () => {
+    const axiosSecure = useAxiosSecure();
 
-    const handleSubmit = e => {
+    const handleSubmit = async e => {
         e.preventDefault();
 
         const form = e.target;
@@ -27,7 +30,24 @@ const AddLaptopByAdmin = () => {
             imageThree: form.imageThree.value
         }
 
-        console.log(addLaptopData)
+        try {
+            const res = await axiosSecure.post("/addLaptops", addLaptopData);
+            if (res.data.insertedId) {
+                form.reset()
+                Swal.fire({
+                    title: "Success!",
+                    text: "Laptop device has been added successfully.",
+                    icon: "success"
+                });
+            }
+
+        } catch (error) {
+            Swal.fire({
+                title: "Error!",
+                text: "Something went wrong while adding the Laptop device.",
+                icon: "error"
+            });
+        }
     }
 
     return (

@@ -1,12 +1,15 @@
 import { TextField, Button, Card, CardContent, Typography } from '@mui/material';
+import Swal from 'sweetalert2';
+import useAxiosSecure from '../../../Hooks/useAxiosSecure';
 
 const AddProductsByAdmin = () => {
+    const axiosSecure = useAxiosSecure();
 
-    const formData = e => {
+    const formData = async e => {
         e.preventDefault();
 
         const form = e.target;
-        const formDataObj = {
+        const addPhonesData = {
             brand: form.brand.value,
             model: form.model.value,
             network: form.network.value,
@@ -23,7 +26,7 @@ const AddProductsByAdmin = () => {
             mainCamera: form.mainCamera.value,
             frontCamera: form.frontCamera.value,
             sound: form.sound.value,
-            batteryInfo: form.batteryInfo.value, 
+            batteryInfo: form.batteryInfo.value,
             sensors: form.sensors.value,
             otherFeatures: form.otherFeatures.value,
             cashDiscountPrice: form.cashDiscountPrice.value,
@@ -35,7 +38,24 @@ const AddProductsByAdmin = () => {
             imageThree: form.imageThree.value,
         };
 
-        console.log(formDataObj);
+        try {
+            const res = await axiosSecure.post("/addPhones", addPhonesData);
+            if (res.data.insertedId) {
+                form.reset()
+                Swal.fire({
+                    title: "Success!",
+                    text: "Phone device has been added successfully.",
+                    icon: "success"
+                });
+            }
+
+        } catch (error) {
+            Swal.fire({
+                title: "Error!",
+                text: "Something went wrong while adding the Phone device.",
+                icon: "error"
+            });
+        }
 
 
     }
@@ -260,11 +280,11 @@ const AddProductsByAdmin = () => {
                                 margin="dense"
                             />
 
-                            {/* Sensor*/}
+                            {/* Sensors*/}
                             <TextField
-                                label="Sensor"
+                                label="Sensors"
                                 type="text"
-                                name='sensor'
+                                name='sensors'
                                 fullWidth
                                 required
                                 variant="outlined"
