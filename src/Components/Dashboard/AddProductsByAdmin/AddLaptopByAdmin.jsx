@@ -1,43 +1,33 @@
 import { TextField, Button, Card, CardContent, Typography } from '@mui/material';
 
-const AddProductsByAdmin = () => {
+const AddLaptopByAdmin = () => {
 
-    const formData = e => {
+    const handleSubmit = e => {
         e.preventDefault();
 
         const form = e.target;
-        const formDataObj = {
+        const addLaptopData = {
             brand: form.brand.value,
+            body: form.body.value,
+            platForm: form.platForm.value,
+            keyboardType: form.keyboardType.value,
             model: form.model.value,
-            network: form.network.value,
-            dimension: form.dimension.value,
-            weight: form.weight.value,
-            sim: form.sim.value,
-            displayType: form.displayType.value,
-            displaySize: form.displaySize.value,
-            displayResolution: form.displayResolution.value,
-            os: form.os.value,
-            chipset: form.chipset.value,
-            cpu: form.cpu.value,
-            storage: form.storage.value,
-            mainCamera: form.mainCamera.value,
-            frontCamera: form.frontCamera.value,
+            ports: form.ports.value,
+            camera: form.camera.value,
+            display: form.display.value,
+            memory: form.memory.value,
             sound: form.sound.value,
-            batteryInfo: form.batteryInfo.value, 
-            sensors: form.sensors.value,
-            otherFeatures: form.otherFeatures.value,
+            batteryInfo: form.batteryInfo.value,
             cashDiscountPrice: form.cashDiscountPrice.value,
             inStock: form.inStock.value,
             rating: form.rating.value,
             mainImage: form.mainImage.value,
             imageOne: form.imageOne.value,
             imageTwo: form.imageTwo.value,
-            imageThree: form.imageThree.value,
-        };
+            imageThree: form.imageThree.value
+        }
 
-        console.log(formDataObj);
-
-
+        console.log(addLaptopData)
     }
 
     return (
@@ -46,16 +36,16 @@ const AddProductsByAdmin = () => {
                 <CardContent>
                     <div className='mb-3 '>
                         <Typography variant="h4" className="text-center font-bold underline">
-                            Add Phones
+                            Add Laptop
                         </Typography>
                     </div>
                     <div className='mb-3'>
                         <Typography className="text-gray-400 text-center">
-                            Phone's item add by admin
+                            Laptop's item add by admin
                         </Typography>
                     </div>
 
-                    <form onSubmit={formData}>
+                    <form onSubmit={handleSubmit}>
                         <div className='md:flex justify-between gap-3'>
                             {/* brand */}
                             <TextField
@@ -68,7 +58,44 @@ const AddProductsByAdmin = () => {
                                 margin="dense"
                             />
 
-                            {/* Model */}
+                            {/* body */}
+                            <TextField
+                                label="Body"
+                                type="text"
+                                name='body'
+                                fullWidth
+                                required
+                                variant="outlined"
+                                margin="dense"
+                            />
+                        </div>
+
+                        <div className='md:flex justify-between gap-3'>
+                            {/* platform */}
+                            <TextField
+                                label="PlatForm"
+                                type="text"
+                                name='platForm'
+                                fullWidth
+                                required
+                                variant="outlined"
+                                margin="dense"
+                            />
+
+                            {/* Keyboard Type */}
+                            <TextField
+                                label="Keyboard Type"
+                                type="text"
+                                name='keyboardType'
+                                fullWidth
+                                required
+                                variant="outlined"
+                                margin="dense"
+                            />
+                        </div>
+
+                        <div className='md:flex justify-between gap-3'>
+                            {/* model */}
                             <TextField
                                 label="Model"
                                 type="text"
@@ -78,25 +105,12 @@ const AddProductsByAdmin = () => {
                                 variant="outlined"
                                 margin="dense"
                             />
-                        </div>
 
-                        <div className='md:flex justify-between gap-3'>
-                            {/* Network */}
+                            {/* ports */}
                             <TextField
-                                label="Network"
+                                label="Ports"
                                 type="text"
-                                name='network'
-                                fullWidth
-                                required
-                                variant="outlined"
-                                margin="dense"
-                            />
-
-                            {/* Dimension */}
-                            <TextField
-                                label="Dimension"
-                                type="text"
-                                name='dimension'
+                                name='ports'
                                 fullWidth
                                 required
                                 variant="outlined"
@@ -105,22 +119,22 @@ const AddProductsByAdmin = () => {
                         </div>
 
                         <div className='md:flex justify-between gap-3'>
-                            {/* Weight */}
+                            {/* Camera */}
                             <TextField
-                                label="Weight"
+                                label="Camera"
                                 type="text"
-                                name='weight'
+                                name='camera'
                                 fullWidth
                                 required
                                 variant="outlined"
                                 margin="dense"
                             />
 
-                            {/* Sim */}
+                            {/* Display */}
                             <TextField
-                                label="Sim"
+                                label="Display"
                                 type="text"
-                                name='sim'
+                                name='display'
                                 fullWidth
                                 required
                                 variant="outlined"
@@ -129,107 +143,11 @@ const AddProductsByAdmin = () => {
                         </div>
 
                         <div className='md:flex justify-between gap-3'>
-                            {/* Display Type */}
+                            {/* Memory */}
                             <TextField
-                                label="Display Type"
+                                label="Memory"
                                 type="text"
-                                name='displayType'
-                                fullWidth
-                                required
-                                variant="outlined"
-                                margin="dense"
-                            />
-
-                            {/* Display Size */}
-                            <TextField
-                                label="Display Size"
-                                type="text"
-                                name='displaySize'
-                                fullWidth
-                                required
-                                variant="outlined"
-                                margin="dense"
-                            />
-                        </div>
-
-                        <div className='md:flex justify-between gap-3'>
-                            {/* Display_Resolution */}
-                            <TextField
-                                label="Display_Resolution"
-                                type="text"
-                                name='displayResolution'
-                                fullWidth
-                                required
-                                variant="outlined"
-                                margin="dense"
-                            />
-
-                            {/* OS */}
-                            <TextField
-                                label="OS"
-                                type="text"
-                                name='os'
-                                fullWidth
-                                required
-                                variant="outlined"
-                                margin="dense"
-                            />
-                        </div>
-
-                        <div className='md:flex justify-between gap-3'>
-                            {/* Chipset */}
-                            <TextField
-                                label="Chipset"
-                                type="text"
-                                name='chipset'
-                                fullWidth
-                                required
-                                variant="outlined"
-                                margin="dense"
-                            />
-
-                            {/* CPU */}
-                            <TextField
-                                label="CPU:"
-                                type="text"
-                                name='cpu'
-                                fullWidth
-                                required
-                                variant="outlined"
-                                margin="dense"
-                            />
-                        </div>
-
-                        <div className='md:flex justify-between gap-3'>
-                            {/* Storage */}
-                            <TextField
-                                label="Storage"
-                                type="text"
-                                name='storage'
-                                fullWidth
-                                required
-                                variant="outlined"
-                                margin="dense"
-                            />
-
-                            {/* Main Camera */}
-                            <TextField
-                                label="Main Camera:"
-                                type="url"
-                                name='mainCamera'
-                                fullWidth
-                                required
-                                variant="outlined"
-                                margin="dense"
-                            />
-                        </div>
-
-                        <div className='md:flex justify-between gap-3'>
-                            {/* Front Image */}
-                            <TextField
-                                label="Front Image"
-                                type="url"
-                                name='frontCamera'
+                                name='memory'
                                 fullWidth
                                 required
                                 variant="outlined"
@@ -238,7 +156,7 @@ const AddProductsByAdmin = () => {
 
                             {/* Sound */}
                             <TextField
-                                label="Sound:"
+                                label="Sound"
                                 type="text"
                                 name='sound'
                                 fullWidth
@@ -260,33 +178,9 @@ const AddProductsByAdmin = () => {
                                 margin="dense"
                             />
 
-                            {/* Sensor*/}
+                            {/* Cash discount price */}
                             <TextField
-                                label="Sensor"
-                                type="text"
-                                name='sensor'
-                                fullWidth
-                                required
-                                variant="outlined"
-                                margin="dense"
-                            />
-                        </div>
-
-                        <div className='md:flex justify-between gap-3'>
-                            {/* Other_Features */}
-                            <TextField
-                                label="Other_Features"
-                                type="text"
-                                name='otherFeatures'
-                                fullWidth
-                                required
-                                variant="outlined"
-                                margin="dense"
-                            />
-
-                            {/* cash discount price */}
-                            <TextField
-                                label="Cash_Discount_Price"
+                                label="Cash Discount Price:"
                                 type="text"
                                 name='cashDiscountPrice'
                                 fullWidth
@@ -297,9 +191,9 @@ const AddProductsByAdmin = () => {
                         </div>
 
                         <div className='md:flex justify-between gap-3'>
-                            {/* In Stock */}
+                            {/* In stock */}
                             <TextField
-                                label="In Stock"
+                                label="In stock"
                                 type="text"
                                 name='inStock'
                                 fullWidth
@@ -310,7 +204,7 @@ const AddProductsByAdmin = () => {
 
                             {/* Rating */}
                             <TextField
-                                label="Rating"
+                                label="Rating:"
                                 type="number"
                                 name='rating'
                                 fullWidth
@@ -368,6 +262,7 @@ const AddProductsByAdmin = () => {
                             />
                         </div>
 
+
                         <div className='mt-3'>
                             <Button
                                 type='submit'
@@ -388,4 +283,4 @@ const AddProductsByAdmin = () => {
     );
 };
 
-export default AddProductsByAdmin;
+export default AddLaptopByAdmin;

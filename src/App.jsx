@@ -7,6 +7,7 @@ import AddProductsByAdmin from "./Components/Dashboard/AddProductsByAdmin/AddPro
 import AllProducts from "./Components/AllProducts/AllProducts"
 import AuthTabs from "./Social/Tab/AuthTabs"
 import ManageUser from "./Components/AdminDashboard/ManageUser/ManageUser"
+import TabShare from "./Shared/TabShare/TabShare"
 
 
 function App() {
@@ -24,7 +25,7 @@ function App() {
 
           {/* dashboard */}
           <Route path="/dashboard" element={<Dashboard></Dashboard>}>
-            <Route path="addProduct" element={<AddProductsByAdmin />}></Route>
+            <Route path="addProduct" element={<TabShare />}></Route>
             <Route path="manageUsers" element={<ManageUser />}></Route>
           </Route>
         </Routes>
