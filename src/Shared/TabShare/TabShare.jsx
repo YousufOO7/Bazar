@@ -5,6 +5,7 @@ import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import AddProductsByAdmin from '../../Components/Dashboard/AddProductsByAdmin/AddProductsByAdmin';
 import AddLaptopByAdmin from '../../Components/Dashboard/AddProductsByAdmin/AddLaptopByAdmin';
+import AddBluetoothByAdmin from '../../Components/Dashboard/AddProductsByAdmin/AddBluetoothByAdmin';
 
 function CustomTabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -48,9 +49,9 @@ const TabShare = () => {
         <Box sx={{ width: '100%' }}>
           <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
             <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-              <Tab label="Phones" {...a11yProps(0)} />
-              <Tab label="Laptops" {...a11yProps(1)} />
-              <Tab label="Bluetooth" {...a11yProps(2)} />
+              <Tab label="Phone's" {...a11yProps(0)} />
+              <Tab label="Laptop's" {...a11yProps(1)} />
+              <Tab label="Bluetooth's" {...a11yProps(2)} />
             </Tabs>
           </Box>
           <CustomTabPanel value={value} index={0}>
@@ -60,7 +61,7 @@ const TabShare = () => {
             <div><AddLaptopByAdmin /></div>
           </CustomTabPanel>
           <CustomTabPanel value={value} index={2}>
-            <div>Bluetooth</div>
+            <div><AddBluetoothByAdmin /></div>
           </CustomTabPanel>
         </Box>
       </div>
