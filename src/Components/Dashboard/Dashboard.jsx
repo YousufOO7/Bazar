@@ -24,7 +24,7 @@ const Dashboard = () => {
                     <li>
                         <NavLink to="/dashboard/addProduct">
                             <MdPreview></MdPreview>
-                            Product Management
+                            Add Product's
                         </NavLink>
                     </li>
                     <li>
@@ -40,9 +40,9 @@ const Dashboard = () => {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/dashboard/manageCoupon">
+                        <NavLink to="/dashboard/allProducts">
                             <RiCoupon2Fill></RiCoupon2Fill>
-                            Manage Coupon
+                            All Product's
                         </NavLink>
                     </li>
                 </>

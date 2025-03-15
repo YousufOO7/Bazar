@@ -3,9 +3,6 @@ import PropTypes from 'prop-types';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
-import AddProductsByAdmin from '../../Components/Dashboard/AddProductsByAdmin/AddProductsByAdmin';
-import AddLaptopByAdmin from '../../Components/Dashboard/AddProductsByAdmin/AddLaptopByAdmin';
-import AddBluetoothByAdmin from '../../Components/Dashboard/AddProductsByAdmin/AddBluetoothByAdmin';
 
 function CustomTabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -36,7 +33,7 @@ function CustomTabPanel(props) {
     };
   }
 
-const TabShare = () => {
+const TabShare = ({TabOne, TabTwo, TabThree}) => {
 
     const [value, setValue] = React.useState(0);
     
@@ -55,13 +52,13 @@ const TabShare = () => {
             </Tabs>
           </Box>
           <CustomTabPanel value={value} index={0}>
-            <div><AddProductsByAdmin /></div>
+            {TabOne}
           </CustomTabPanel>
           <CustomTabPanel value={value} index={1}>
-            <div><AddLaptopByAdmin /></div>
+            {TabTwo}
           </CustomTabPanel>
           <CustomTabPanel value={value} index={2}>
-            <div><AddBluetoothByAdmin /></div>
+            {TabThree}
           </CustomTabPanel>
         </Box>
       </div>

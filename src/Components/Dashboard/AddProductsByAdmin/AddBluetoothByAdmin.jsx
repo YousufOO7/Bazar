@@ -25,7 +25,7 @@ const AddBluetoothByAdmin = () => {
 
         try {
             const res = await axiosSecure.post("/addBluetooth", addBluetoothData);
-            if(res.data.insertedId){
+            if (res.data.insertedId) {
                 form.reset()
                 Swal.fire({
                     title: "Success!",
@@ -33,7 +33,7 @@ const AddBluetoothByAdmin = () => {
                     icon: "success"
                 });
             }
-        
+
         } catch (error) {
             Swal.fire({
                 title: "Error!",
@@ -41,122 +41,122 @@ const AddBluetoothByAdmin = () => {
                 icon: "error"
             });
         }
-        
+
     }
 
     return (
         <div className="flex justify-center items-center bg-base-200">
-        <Card className="w-full p-6 shadow-xl">
-            <CardContent>
-                <div className='mb-3 '>
-                    <Typography variant="h4" className="text-center font-bold underline">
-                        Add Bluetooth's
-                    </Typography>
-                </div>
-                <div className='mb-3'>
-                    <Typography className="text-gray-400 text-center">
-                        Bluetooth's item add by admin
-                    </Typography>
-                </div>
-
-                <form onSubmit={handleSubmit}>
-                    <div className='md:flex justify-between gap-3'>
-                        {/* brand */}
-                        <TextField
-                            label="Brand"
-                            type="text"
-                            name='brand'
-                            fullWidth
-                            required
-                            variant="outlined"
-                            margin="dense"
-                        />
-
-                        {/* Power Output */}
-                        <TextField
-                            label="Power Output"
-                            type="text"
-                            name='powerOutput'
-                            fullWidth
-                            required
-                            variant="outlined"
-                            margin="dense"
-                        />
+            <Card className="w-full p-6 shadow-xl">
+                <CardContent>
+                    <div className='mb-3 '>
+                        <Typography variant="h4" className="text-center font-bold underline">
+                            Add Bluetooth's
+                        </Typography>
+                    </div>
+                    <div className='mb-3'>
+                        <Typography className="text-gray-400 text-center">
+                            Bluetooth's item add by admin
+                        </Typography>
                     </div>
 
-                    <div className='md:flex justify-between gap-3'>
-                        {/* Bluetooth */}
-                        <TextField
-                            label="Bluetooth"
-                            type="text"
-                            name='bluetooth'
-                            fullWidth
-                            required
-                            variant="outlined"
-                            margin="dense"
-                        />
+                    <form onSubmit={handleSubmit}>
+                        <div className='md:flex justify-between gap-3'>
+                            {/* brand */}
+                            <TextField
+                                label="Brand"
+                                type="text"
+                                name='brand'
+                                fullWidth
+                                required
+                                variant="outlined"
+                                margin="dense"
+                            />
 
-                        {/* Model */}
-                        <TextField
-                            label="Model"
-                            type="text"
-                            name='model'
-                            fullWidth
-                            required
-                            variant="outlined"
-                            margin="dense"
-                        />
-                    </div>
+                            {/* Power Output */}
+                            <TextField
+                                label="Power Output"
+                                type="text"
+                                name='powerOutput'
+                                fullWidth
+                                required
+                                variant="outlined"
+                                margin="dense"
+                            />
+                        </div>
 
-                    <div className='md:flex justify-between gap-3'>
-                        {/* Weight */}
-                        <TextField
-                            label="Weight"
-                            type="text"
-                            name='weight'
-                            fullWidth
-                            required
-                            variant="outlined"
-                            margin="dense"
-                        />
+                        <div className='md:flex justify-between gap-3'>
+                            {/* Bluetooth */}
+                            <TextField
+                                label="Bluetooth"
+                                type="text"
+                                name='bluetooth'
+                                fullWidth
+                                required
+                                variant="outlined"
+                                margin="dense"
+                            />
 
-                        {/* Dimension */}
-                        <TextField
-                            label="Dimension"
-                            type="text"
-                            name='dimension'
-                            fullWidth
-                            required
-                            variant="outlined"
-                            margin="dense"
-                        />
-                    </div>
+                            {/* Model */}
+                            <TextField
+                                label="Model"
+                                type="text"
+                                name='model'
+                                fullWidth
+                                required
+                                variant="outlined"
+                                margin="dense"
+                            />
+                        </div>
 
-                    <div className='md:flex justify-between gap-3'>
-                        {/* Play Time */}
-                        <TextField
-                            label="Play Time"
-                            type="text"
-                            name='playTime'
-                            fullWidth
-                            required
-                            variant="outlined"
-                            margin="dense"
-                        />
+                        <div className='md:flex justify-between gap-3'>
+                            {/* Weight */}
+                            <TextField
+                                label="Weight"
+                                type="text"
+                                name='weight'
+                                fullWidth
+                                required
+                                variant="outlined"
+                                margin="dense"
+                            />
 
-                        {/* Other Features / Info */}
-                        <TextField
-                            label="Other Features / Info"
-                            type="text"
-                            name='otherFeatures'
-                            fullWidth
-                            required
-                            variant="outlined"
-                            margin="dense"
-                        />
-                    </div>
+                            {/* Dimension */}
+                            <TextField
+                                label="Dimension"
+                                type="text"
+                                name='dimension'
+                                fullWidth
+                                required
+                                variant="outlined"
+                                margin="dense"
+                            />
+                        </div>
 
-                    <div className='md:flex justify-between gap-3'>
+                        <div className='md:flex justify-between gap-3'>
+                            {/* Play Time */}
+                            <TextField
+                                label="Play Time"
+                                type="text"
+                                name='playTime'
+                                fullWidth
+                                required
+                                variant="outlined"
+                                margin="dense"
+                            />
+
+                            {/* Other Features / Info */}
+                            <TextField
+                                label="Other Features / Info"
+                                type="text"
+                                name='otherFeatures'
+                                fullWidth
+                                required
+                                variant="outlined"
+                                margin="dense"
+                            />
+                        </div>
+
+                        <div className='md:flex justify-between gap-3'>
                             {/* In stock */}
                             <TextField
                                 label="In stock"
@@ -194,23 +194,23 @@ const AddBluetoothByAdmin = () => {
                         </div>
 
 
-                    <div className='mt-3'>
-                        <Button
-                            type='submit'
-                            variant="contained"
-                            fullWidth
-                            sx={{
-                                backgroundColor: "#F0812A",
-                                "&:hover": { backgroundColor: "#d66f25" }
-                            }}
-                        >
-                            Submit
-                        </Button>
-                    </div>
-                </form>
-            </CardContent>
-        </Card>
-    </div>
+                        <div className='mt-3'>
+                            <Button
+                                type='submit'
+                                variant="contained"
+                                fullWidth
+                                sx={{
+                                    backgroundColor: "#F0812A",
+                                    "&:hover": { backgroundColor: "#d66f25" }
+                                }}
+                            >
+                                Submit
+                            </Button>
+                        </div>
+                    </form>
+                </CardContent>
+            </Card>
+        </div>
     );
 };
 
