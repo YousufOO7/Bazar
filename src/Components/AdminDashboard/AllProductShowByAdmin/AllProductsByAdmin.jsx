@@ -1,4 +1,5 @@
 import TabShare from "../../../Shared/TabShare/TabShare";
+import ShowLaptopsByTable from "./ShowLaptopsByTable";
 import ShowPhonesByTable from "./ShowPhonesByTable";
 
 
@@ -7,6 +8,7 @@ const AllProductsByAdmin = () => {
         <div>
             <TabShare 
             TabOne={<ShowPhonesByTable />}
+            TabTwo={<ShowLaptopsByTable />}
             ></TabShare>
         </div>
     );

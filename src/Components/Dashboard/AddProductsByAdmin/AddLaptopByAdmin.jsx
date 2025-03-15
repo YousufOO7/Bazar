@@ -12,6 +12,8 @@ const AddLaptopByAdmin = () => {
         const addLaptopData = {
             brand: form.brand.value,
             body: form.body.value,
+            category: form.category.value,
+            productCode: form.productCode.value,
             platForm: form.platForm.value,
             keyboardType: form.keyboardType.value,
             model: form.model.value,
@@ -27,7 +29,14 @@ const AddLaptopByAdmin = () => {
             mainImage: form.mainImage.value,
             imageOne: form.imageOne.value,
             imageTwo: form.imageTwo.value,
-            imageThree: form.imageThree.value
+            imageThree: form.imageThree.value,
+            descriptionImage: form.descriptionImage.value,
+            descriptionTitleOne: form.descriptionTitleOne.value,
+            descriptionTitleTwo: form.descriptionTitleTwo.value,
+            descriptionTitleThree: form.descriptionTitleThree.value,
+            descriptionTextOne: form.descriptionTextOne.value,
+            descriptionTextTwo: form.descriptionTextTwo.value,
+            descriptionTextThree: form.descriptionTextThree.value
         }
 
         try {
@@ -83,6 +92,30 @@ const AddLaptopByAdmin = () => {
                                 label="Body"
                                 type="text"
                                 name='body'
+                                fullWidth
+                                required
+                                variant="outlined"
+                                margin="dense"
+                            />
+                        </div>
+
+                        <div className='md:flex justify-between gap-3'>
+                            {/* Category */}
+                            <TextField
+                                label="Category"
+                                type="text"
+                                name='category'
+                                fullWidth
+                                required
+                                variant="outlined"
+                                margin="dense"
+                            />
+
+                            {/* Product Code */}
+                            <TextField
+                                label="Product Code"
+                                type="number"
+                                name='productCode'
                                 fullWidth
                                 required
                                 variant="outlined"
@@ -281,6 +314,90 @@ const AddLaptopByAdmin = () => {
                                 margin="dense"
                             />
                         </div>
+
+                        <div className='md:flex justify-between gap-3'>
+                            {/* Description Image */}
+                            <TextField
+                                label="Description Image"
+                                type="url"
+                                name='descriptionImage'
+                                fullWidth
+                                required
+                                variant="outlined"
+                                margin="dense"
+                            />
+
+                            {/* Description_Title_One */}
+                            <TextField
+                                label="Description Title One"
+                                type="text"
+                                name='descriptionTitleOne'
+                                fullWidth
+                                required
+                                variant="outlined"
+                                margin="dense"
+                            />
+                        </div>
+
+                        <div className='md:flex justify-between gap-3'>
+                            {/* Description_Title_Two */}
+                            <TextField
+                                label="Description Title Two"
+                                type="text"
+                                name='descriptionTitleTwo'
+                                fullWidth
+                                required
+                                variant="outlined"
+                                margin="dense"
+                            />
+
+                            {/* Description_Title_Three */}
+                            <TextField
+                                label="Description Title Three"
+                                type="text"
+                                name='descriptionTitleThree'
+                                fullWidth
+                                required
+                                variant="outlined"
+                                margin="dense"
+                            />
+                        </div>
+
+                        <div className='md:flex justify-between gap-3'>
+                            {/* Description_Text_One */}
+                            <TextField
+                                label="Description Text One"
+                                type="text"
+                                name='descriptionTextOne'
+                                fullWidth
+                                required
+                                variant="outlined"
+                                margin="dense"
+                            />
+
+                            {/* Description_Text_Two */}
+                            <TextField
+                                label="Description Text Two"
+                                type="text"
+                                name='descriptionTextTwo'
+                                fullWidth
+                                required
+                                variant="outlined"
+                                margin="dense"
+                            />
+                        </div>
+
+                        
+                            {/* Description_Text_Three */}
+                            <TextField
+                                label="Description Text Three"
+                                type="text"
+                                name='descriptionTextThree'
+                                fullWidth
+                                required
+                                variant="outlined"
+                                margin="dense"
+                            />
 
 
                         <div className='mt-3'>
