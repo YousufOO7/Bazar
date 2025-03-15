@@ -11,16 +11,30 @@ const AddBluetoothByAdmin = () => {
         const form = e.target;
         const addBluetoothData = {
             brand: form.brand.value,
-            powerOutput: form.powerOutput.value,
+            chargingInterface: form.chargingInterface.value,
             bluetooth: form.bluetooth.value,
             model: form.model.value,
-            weight: form.weight.value,
-            dimension: form.dimension.value,
+            compatibility: form.compatibility.value,
+            calling: form.calling.value,
+            driverSize: form.driverSize.value,
+            WaterResistance: form.WaterResistance.value,
             playTime: form.playTime.value,
+            rating: form.rating.value,
+            batteryInfo: form.batteryInfo.value,
             otherFeatures: form.otherFeatures.value,
             inStock: form.inStock.value,
+            cashDiscountPrice: form.cashDiscountPrice.value,
             mainImage: form.mainImage.value,
-            cashDiscountPrice: form.cashDiscountPrice.value
+            imageOne: form.imageOne.value,
+            imageTwo: form.imageTwo.value,
+            imageThree: form.imageThree.value,
+            descriptionImage: form.descriptionImage.value,
+            descriptionTitleOne: form.descriptionTitleOne.value,
+            descriptionTitleTwo: form.descriptionTitleTwo.value,
+            descriptionTitleThree: form.descriptionTitleThree.value,
+            descriptionTextOne: form.descriptionTextOne.value,
+            descriptionTextTwo: form.descriptionTextTwo.value,
+            descriptionTextThree: form.descriptionTextThree.value
         }
 
         try {
@@ -72,11 +86,11 @@ const AddBluetoothByAdmin = () => {
                                 margin="dense"
                             />
 
-                            {/* Power Output */}
+                            {/* Charging Interface */}
                             <TextField
-                                label="Power Output"
+                                label="Charging Interface"
                                 type="text"
-                                name='powerOutput'
+                                name='chargingInterface'
                                 fullWidth
                                 required
                                 variant="outlined"
@@ -109,22 +123,22 @@ const AddBluetoothByAdmin = () => {
                         </div>
 
                         <div className='md:flex justify-between gap-3'>
-                            {/* Weight */}
+                            {/* Compatibility */}
                             <TextField
-                                label="Weight"
+                                label="Compatibility"
                                 type="text"
-                                name='weight'
+                                name='compatibility'
                                 fullWidth
                                 required
                                 variant="outlined"
                                 margin="dense"
                             />
 
-                            {/* Dimension */}
+                            {/* Calling */}
                             <TextField
-                                label="Dimension"
+                                label="Calling"
                                 type="text"
-                                name='dimension'
+                                name='calling'
                                 fullWidth
                                 required
                                 variant="outlined"
@@ -181,6 +195,55 @@ const AddBluetoothByAdmin = () => {
                         </div>
 
                         <div className='md:flex justify-between gap-3'>
+                            {/* Driver Size */}
+                            <TextField
+                                label="Driver Size"
+                                type="text"
+                                name='driverSize'
+                                fullWidth
+                                required
+                                variant="outlined"
+                                margin="dense"
+                            />
+
+                            {/* Sweat & Water Resistance */}
+                            <TextField
+                                label="Sweat & Water Resistance:"
+                                type="text"
+                                name='WaterResistance'
+                                fullWidth
+                                required
+                                variant="outlined"
+                                margin="dense"
+                            />
+                        </div>
+
+                        <div className='md:flex justify-between gap-3'>
+
+                             {/* Rating */}
+                             <TextField
+                                label="Rating"
+                                type="number"
+                                name='rating'
+                                fullWidth
+                                required
+                                variant="outlined"
+                                margin="dense"
+                            />
+
+                            {/* Battery Info */}
+                            <TextField
+                                label="Battery Info"
+                                type="text"
+                                name='batteryInfo'
+                                fullWidth
+                                required
+                                variant="outlined"
+                                margin="dense"
+                            />
+                        </div>
+
+                        <div className='md:flex justify-between gap-3'>
                             {/* Main Image */}
                             <TextField
                                 label="Main Image"
@@ -191,7 +254,126 @@ const AddBluetoothByAdmin = () => {
                                 variant="outlined"
                                 margin="dense"
                             />
+
+                            {/* Image One */}
+                            <TextField
+                                label="Image One:"
+                                type="url"
+                                name='imageOne'
+                                fullWidth
+                                required
+                                variant="outlined"
+                                margin="dense"
+                            />
                         </div>
+
+                        <div className='md:flex justify-between gap-3'>
+                            {/* Image Two */}
+                            <TextField
+                                label="Image Two"
+                                type="url"
+                                name='imageTwo'
+                                fullWidth
+                                required
+                                variant="outlined"
+                                margin="dense"
+                            />
+
+                            {/* Image Three */}
+                            <TextField
+                                label="Image Three:"
+                                type="url"
+                                name='imageThree'
+                                fullWidth
+                                required
+                                variant="outlined"
+                                margin="dense"
+                            />
+                        </div>
+
+                        <div className='md:flex justify-between gap-3'>
+                            {/* Description Image */}
+                            <TextField
+                                label="Description Image"
+                                type="url"
+                                name='descriptionImage'
+                                fullWidth
+                                required
+                                variant="outlined"
+                                margin="dense"
+                            />
+
+                            {/* Description_Title_One */}
+                            <TextField
+                                label="Description Title One"
+                                type="text"
+                                name='descriptionTitleOne'
+                                fullWidth
+                                required
+                                variant="outlined"
+                                margin="dense"
+                            />
+                        </div>
+
+                        <div className='md:flex justify-between gap-3'>
+                            {/* Description_Title_Two */}
+                            <TextField
+                                label="Description Title Two"
+                                type="text"
+                                name='descriptionTitleTwo'
+                                fullWidth
+                                required
+                                variant="outlined"
+                                margin="dense"
+                            />
+
+                            {/* Description_Title_Three */}
+                            <TextField
+                                label="Description Title Three"
+                                type="text"
+                                name='descriptionTitleThree'
+                                fullWidth
+                                required
+                                variant="outlined"
+                                margin="dense"
+                            />
+                        </div>
+
+                        <div className='md:flex justify-between gap-3'>
+                            {/* Description_Text_One */}
+                            <TextField
+                                label="Description Text One"
+                                type="text"
+                                name='descriptionTextOne'
+                                fullWidth
+                                required
+                                variant="outlined"
+                                margin="dense"
+                            />
+
+                            {/* Description_Text_Two */}
+                            <TextField
+                                label="Description Text Two"
+                                type="text"
+                                name='descriptionTextTwo'
+                                fullWidth
+                                required
+                                variant="outlined"
+                                margin="dense"
+                            />
+                        </div>
+
+
+                        {/* Description_Text_Three */}
+                        <TextField
+                            label="Description Text Three"
+                            type="text"
+                            name='descriptionTextThree'
+                            fullWidth
+                            required
+                            variant="outlined"
+                            margin="dense"
+                        />
 
 
                         <div className='mt-3'>
