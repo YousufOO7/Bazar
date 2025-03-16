@@ -1,9 +1,28 @@
 import { TextField, Button, Card, CardContent, Typography } from '@mui/material';
 import Swal from 'sweetalert2';
 import useAxiosSecure from '../../../Hooks/useAxiosSecure';
+import { WithContext as ReactTags } from "react-tag-input";
+import React from 'react';
 
 const AddProductsByAdmin = () => {
     const axiosSecure = useAxiosSecure();
+    const [tags, setTags] = React.useState([]);
+
+      // ReactTag Handlers
+      const handleDelete = (index) => {
+        setTags(tags.filter((_, i) => i !== index));
+    };
+
+    const handleAddition = (tag) => {
+        setTags([...tags, tag]);
+    };
+
+    const handleDrag = (tag, currPos, newPos) => {
+        const newTags = tags.slice();
+        newTags.splice(currPos, 1);
+        newTags.splice(newPos, 0, tag);
+        setTags(newTags);
+    };
 
     const formData = async e => {
         e.preventDefault();
@@ -24,7 +43,7 @@ const AddProductsByAdmin = () => {
             os: form.os.value,
             chipset: form.chipset.value,
             cpu: form.cpu.value,
-            storage: form.storage.value,
+            storage: tags.map((tag) => tag.text),
             mainCamera: form.mainCamera.value,
             frontCamera: form.frontCamera.value,
             sound: form.sound.value,
@@ -253,20 +272,27 @@ const AddProductsByAdmin = () => {
                             />
                         </div>
 
-                        <div className='md:flex justify-between gap-3'>
-                            {/* Storage */}
-                            <TextField
-                                label="Storage"
-                                type="text"
-                                name='storage'
-                                fullWidth
-                                required
-                                variant="outlined"
-                                margin="dense"
+                        <div className='md:flex justify-between gap-3 items-center'>
+                           <div className='flex-1'>
+                             {/* Storage */}
+                            <ReactTags
+                                tags={tags}
+                                handleDelete={handleDelete}
+                                handleAddition={handleAddition}
+                                handleDrag={handleDrag}
+                                delimiters={[188, 13]}
+                                placeholder="Add Storage use Comma and Enter key after every single tag"
+                                classNames={{
+                                    tags: "tags-input",
+                                    tagInputField: "input input-bordered w-full ",
+                                    tag: "badge badge-primary mr-2 mb-2",
+                                }}
                             />
+                           </div>
 
-                            {/* Main Camera */}
-                            <TextField
+                           <div className='flex-1'>
+                             {/* Main Camera */}
+                             <TextField
                                 label="Main Camera:"
                                 type="url"
                                 name='mainCamera'
@@ -275,6 +301,7 @@ const AddProductsByAdmin = () => {
                                 variant="outlined"
                                 margin="dense"
                             />
+                           </div>
                         </div>
 
                         <div className='md:flex justify-between gap-3'>
@@ -339,7 +366,7 @@ const AddProductsByAdmin = () => {
 
                             {/* cash discount price */}
                             <TextField
-                                label="Cash_Discount_Price"
+                                label="Cash Discount Price"
                                 type="text"
                                 name='cashDiscountPrice'
                                 fullWidth
@@ -411,7 +438,7 @@ const AddProductsByAdmin = () => {
 
                             {/* Image Three */}
                             <TextField
-                                label="Image Three:"
+                                label="Image Three"
                                 type="url"
                                 name='imageThree'
                                 fullWidth
@@ -444,7 +471,7 @@ const AddProductsByAdmin = () => {
                                 margin="dense"
                             />
                         </div>
-                        
+
                         <div className='md:flex justify-between gap-3'>
                             {/* Description_Title_Two */}
                             <TextField
@@ -493,17 +520,17 @@ const AddProductsByAdmin = () => {
                             />
                         </div>
 
-                        
-                            {/* Description_Text_Three */}
-                            <TextField
-                                label="Description Text Three"
-                                type="text"
-                                name='descriptionTextThree'
-                                fullWidth
-                                required
-                                variant="outlined"
-                                margin="dense"
-                            />
+
+                        {/* Description_Text_Three */}
+                        <TextField
+                            label="Description Text Three"
+                            type="text"
+                            name='descriptionTextThree'
+                            fullWidth
+                            required
+                            variant="outlined"
+                            margin="dense"
+                        />
 
                         <div className='mt-3'>
                             <Button
