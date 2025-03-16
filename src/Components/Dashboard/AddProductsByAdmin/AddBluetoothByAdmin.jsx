@@ -12,6 +12,7 @@ const AddBluetoothByAdmin = () => {
         const addBluetoothData = {
             brand: form.brand.value,
             chargingInterface: form.chargingInterface.value,
+            category: form.category.value,
             bluetooth: form.bluetooth.value,
             model: form.model.value,
             compatibility: form.compatibility.value,
@@ -97,6 +98,17 @@ const AddBluetoothByAdmin = () => {
                                 margin="dense"
                             />
                         </div>
+
+                          {/* Category */}
+                          <TextField
+                                label="Category"
+                                type="text"
+                                name='category'
+                                fullWidth
+                                required
+                                variant="outlined"
+                                margin="dense"
+                            />
 
                         <div className='md:flex justify-between gap-3'>
                             {/* Bluetooth */}
