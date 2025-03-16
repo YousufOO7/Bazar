@@ -1,19 +1,36 @@
-import { useEffect, useState } from "react";
+import { useQuery } from "@tanstack/react-query";
 import TitleShared from "../../../Shared/TitleShared/TitleShared";
-import axios from "axios";
+import useAxiosPublic from "../../../Hooks/useAxiosPublic";
+import { FaEye } from "react-icons/fa";
 import { Link } from "react-router";
 
 
 const Feature = () => {
+    const axiosPublic = useAxiosPublic();
 
-    const [features, setFeatures] = useState([]);
+    const { data: phones = [] } = useQuery({
+        queryKey: ["phones"],
+        queryFn: async () => {
+            const res = await axiosPublic.get("/phones")
+            return res.data.slice(0, 1)
+        }
+    })
 
-    useEffect(() => {
-        axios.get("./feature.json")
-            .then(res => {
-                setFeatures(res.data)
-            })
-    }, [])
+    const { data: laptops = [] } = useQuery({
+        queryKey: ["laptops"],
+        queryFn: async () => {
+            const res = await axiosPublic.get("/laptops")
+            return res.data.slice(0, 1)
+        }
+    })
+
+    const { data: bluetooths = [] } = useQuery({
+        queryKey: ["bluetooths"],
+        queryFn: async () => {
+            const res = await axiosPublic.get("/bluetooths")
+            return res.data.slice(0, 1)
+        }
+    })
 
     return (
         <div className="my-10">
@@ -22,22 +39,53 @@ const Feature = () => {
                 <TitleShared heading={"Feature Category"} subHeading={"Get your desired product from featured category"} />
             </div>
 
-            {/* feature items */}
-            <section className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 my-5 px-4 md:px-8 lg:px-16">
+            <section className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-7xl mx-auto">
+                {/* feature items */}
                 {
-                    features.map(item => (
-                        <Link to="details"><div key={item.id} className="group bg-gray-200 px-2 py-5 rounded-xl">
-                            <div className="flex justify-center">
-                                <img src={item?.image} alt="" className="w-20" />
-                            </div>
-                            <div className="flex justify-center">
-                                <p className="group-hover:text-[#FF882A]">{item?.category}</p>
+                    phones.map(phone => (
+                        <div key={phone._id} className="flex justify-between gap-5 items-center border rounded-md">
+                            <div className="flex justify-center items-center">
+                                <div><img src={phone?.mainImage} className="w-32 h-32" alt="" /></div>
+                                <div>
+                                    <h2 className="text-xl font-semibold uppercase">{phone?.category}</h2>
+                                   <Link to="/allPhones"> <button><FaEye className="text-4xl mt-5" /></button></Link>
+                                </div>
                             </div>
                         </div>
-                        </Link>
+                    ))
+                }
+
+                {/* laptop */}
+                {
+                    laptops.map(laptop => (
+                        <div key={laptop._id} className="flex justify-between gap-5 border rounded-md">
+                            <div className="flex justify-center items-center">
+                                <div><img src={laptop?.mainImage} className="w-32 h-32" alt="" /></div>
+                                <div>
+                                    <h2 className="text-xl font-semibold uppercase">{laptop?.category}</h2>
+                                  <Link to="/allLaptops">  <button><FaEye className="text-4xl mt-5" /></button></Link>
+                                </div>
+                            </div>
+                        </div>
+                    ))
+                }
+
+                {/* bluetooth */}
+                {
+                    bluetooths.map(bluetooth => (
+                        <div key={bluetooth._id} className="flex justify-between gap-5 border rounded-md">
+                            <div className="flex justify-center items-center">
+                                <div><img src={bluetooth?.mainImage} className="w-32 h-32" alt="" /></div>
+                                <div>
+                                    <h2 className="text-xl font-semibold uppercase">{bluetooth?.category}</h2>
+                                 <Link to="/allBluetooth">   <button><FaEye className="text-4xl mt-5" /></button></Link>
+                                </div>
+                            </div>
+                        </div>
                     ))
                 }
             </section>
+
         </div>
     );
 };

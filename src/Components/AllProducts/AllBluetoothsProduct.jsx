@@ -3,20 +3,20 @@ import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import Drawer from '../../Shared/Drawer/Drawer';
-import axios from 'axios';
-import { useState, useEffect } from 'react';
-import { Link } from 'react-router';
+import { useQuery } from '@tanstack/react-query';
+import useAxiosPublic from '../../Hooks/useAxiosPublic';
 
-const AllProducts = () => {
+const AllBluetoothsProduct = () => {
+    const axiosPublic = useAxiosPublic();
 
-    const [bestDeal, setBestDeal] = useState([]);
-
-    useEffect(() => {
-        axios.get("./bestDeal.json")
-            .then(res => {
-                setBestDeal(res.data)
-            })
-    }, []);
+    const {data: allBluetooth = []} = useQuery({
+        queryKey: ["bluetooths"],
+        queryFn: async () => {
+            const res = await axiosPublic.get("/bluetooths")
+            return res.data
+        }
+    })
+    
 
     return (
         <div className="md:flex mt-5 md:mt-20 px-4 md:px-8 lg:px-16 gap-5">
@@ -66,15 +66,15 @@ const AllProducts = () => {
             <div className="w-full flex-1 max-w-5xl mx-auto">
                 <section className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-10 ">
                     {
-                        bestDeal.map(deal => (
-                           <Link to="/details"> <div key={deal.id} className="w-[190px] md:w-[220px] lg:w-[190px] rounded-2xl p-1 border-2 shadow-xl">
+                        allBluetooth.map(bluetooth => (
+                           <div key={bluetooth._id} className="w-[190px] md:w-[220px] lg:w-[190px] rounded-2xl p-1 border-2 shadow-xl">
                                 <div className="flex justify-center">
-                                    <img src={deal.image} alt="" className="h-[180px]" />
+                                    <img src={bluetooth?.mainImage} alt="" className="h-[180px]" />
                                 </div>
 
                                 <div className="items-center text-center mb-5">
-                                    <h3 className="text-semibold mb-5">{deal.title}</h3>
-                                    <p>{deal.price}</p>
+                                    <h3 className="text-semibold mb-5">{bluetooth?.model}</h3>
+                                    <p> $ {bluetooth?.cashDiscountPrice}</p>
                                 </div>
 
                                 <div className="flex justify-evenly pb-3">
@@ -82,7 +82,6 @@ const AllProducts = () => {
                                     <button className="px-2 p-1 border border-[#ff882a] text-[#ff882a] text-xs lg:text-sm rounded-md">Add To Cart</button>
                                 </div>
                             </div>
-                            </Link>
                         ))
                     }
                 </section>
@@ -91,4 +90,4 @@ const AllProducts = () => {
     );
 };
 
-export default AllProducts;
+export default AllBluetoothsProduct;
