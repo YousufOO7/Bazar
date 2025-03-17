@@ -1,7 +1,6 @@
 import { Route, Routes, useLoaderData  } from "react-router"
 import Home from "./Components/Home/Home"
 import Root from "./Components/Root/Root"
-import DetailsPage from "./Components/DetailsPage/DetailsPage"
 import Dashboard from "./Components/Dashboard/Dashboard"
 import AuthTabs from "./Social/Tab/AuthTabs"
 import ManageUser from "./Components/AdminDashboard/ManageUser/ManageUser"
@@ -12,6 +11,8 @@ import AllPhonesProduct from "./Components/AllProducts/AllPhonesProduct"
 import AllLaptopsProduct from "./Components/AllProducts/AllLaptopsProduct"
 import AllBluetoothsProduct from "./Components/AllProducts/AllBluetoothsProduct"
 import PhoneDetails from "./Components/DetailsPage/PhoneDetails"
+import LaptopDetails from "./Components/DetailsPage/LaptopDetails"
+import BluetoothDetails from "./Components/DetailsPage/BluetoothDetails"
 
 
 function App() {
@@ -22,12 +23,13 @@ function App() {
         <Routes>
           <Route path="/" element={<Root></Root>} >
             <Route index element={<Home></Home>}></Route>
-            <Route path="details" element={<DetailsPage />}></Route>
             <Route path="allPhones" element={<AllPhonesProduct />}></Route>
             <Route path="allLaptops" element={<AllLaptopsProduct />}></Route>
             <Route path="allBluetooth" element={<AllBluetoothsProduct />}></Route>
 
-            <Route path="phoneDetails/:id" element={<PhoneDetails />}  ></Route>
+            <Route path="phoneDetails/:id" element={<PhoneDetails />}></Route>
+            <Route path="laptopDetails/:id" element={<LaptopDetails />}></Route>
+            <Route path="bluetoothDetails/:id" element={<BluetoothDetails />}></Route>
 
             <Route path="tab" element={<AuthTabs />}></Route>
           </Route>

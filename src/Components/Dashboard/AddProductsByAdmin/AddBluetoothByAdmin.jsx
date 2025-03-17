@@ -18,7 +18,7 @@ const AddBluetoothByAdmin = () => {
             compatibility: form.compatibility.value,
             calling: form.calling.value,
             driverSize: form.driverSize.value,
-            WaterResistance: form.WaterResistance.value,
+            waterResistance: form.waterResistance.value,
             playTime: form.playTime.value,
             rating: form.rating.value,
             batteryInfo: form.batteryInfo.value,
@@ -222,7 +222,7 @@ const AddBluetoothByAdmin = () => {
                             <TextField
                                 label="Sweat & Water Resistance:"
                                 type="text"
-                                name='WaterResistance'
+                                name='waterResistance'
                                 fullWidth
                                 required
                                 variant="outlined"

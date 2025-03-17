@@ -5,6 +5,7 @@ import Checkbox from '@mui/material/Checkbox';
 import Drawer from '../../Shared/Drawer/Drawer';
 import { useQuery } from '@tanstack/react-query';
 import useAxiosPublic from '../../Hooks/useAxiosPublic';
+import { Link } from 'react-router';
 
 const AllBluetoothsProduct = () => {
     const axiosPublic = useAxiosPublic();
@@ -67,7 +68,7 @@ const AllBluetoothsProduct = () => {
                 <section className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-10 ">
                     {
                         allBluetooth.map(bluetooth => (
-                           <div key={bluetooth._id} className="w-[190px] md:w-[220px] lg:w-[190px] rounded-2xl p-1 border-2 shadow-xl">
+                        <Link to={`/bluetoothDetails/${bluetooth._id}`}>   <div key={bluetooth._id} className="w-[190px] md:w-[220px] lg:w-[190px] rounded-2xl p-1 border-2 shadow-xl">
                                 <div className="flex justify-center">
                                     <img src={bluetooth?.mainImage} alt="" className="h-[180px]" />
                                 </div>
@@ -81,7 +82,7 @@ const AllBluetoothsProduct = () => {
                                     <button className="px-2 p-1  text-xs lg:text-sm bg-[#ff882a] text-white rounded-md">Buy Now</button>
                                     <button className="px-2 p-1 border border-[#ff882a] text-[#ff882a] text-xs lg:text-sm rounded-md">Add To Cart</button>
                                 </div>
-                            </div>
+                            </div></Link>
                         ))
                     }
                 </section>
