@@ -13,6 +13,7 @@ import AllBluetoothsProduct from "./Components/AllProducts/AllBluetoothsProduct"
 import PhoneDetails from "./Components/DetailsPage/PhoneDetails"
 import LaptopDetails from "./Components/DetailsPage/LaptopDetails"
 import BluetoothDetails from "./Components/DetailsPage/BluetoothDetails"
+import Cart from "./Components/UserDashboard/Cart/Cart"
 
 
 function App() {
@@ -36,9 +37,13 @@ function App() {
 
           {/* dashboard */}
           <Route path="/dashboard" element={<Dashboard></Dashboard>}>
+          {/* admin */}
             <Route path="addProduct" element={<AddProduct />}></Route>
             <Route path="manageUsers" element={<ManageUser />}></Route>
             <Route path="allProducts" element={<AllProductsByAdmin />}></Route>
+
+            {/* normal user */}
+            <Route path="cart" element={<Cart />}></Route>
           </Route>
         </Routes>
       </div>
