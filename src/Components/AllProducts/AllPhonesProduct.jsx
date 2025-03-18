@@ -75,13 +75,15 @@ const AllPhonesProduct = () => {
     }
     
 
+    // md:mt-20 | md:flex
+
     return (
-        <div className="md:flex mt-5 md:mt-20 px-4 md:px-8 lg:px-16 gap-5">
-            <div className='md:hidden mb-5'>
+        <div className=" mt-5  px-4 md:px-8 lg:px-16 gap-5">
+            <h2 className="text-4xl text-center font-bold mb-10 underline">All Phone's</h2>
+            {/* <div className='md:hidden mb-5'>
                 <Drawer />
             </div>
             <div className="w-52 bg-white hidden md:block">
-                {/* price */}
                 <div className="bg-gray-100 rounded-md p-2">
                     <h3 className="text-xl font-semibold mt-2">Price Range</h3>
                     <p><hr className="border-[1px] border-[#ff882a] mt-2 mb-5" /></p>
@@ -94,7 +96,6 @@ const AllPhonesProduct = () => {
                     </div>
                 </div>
 
-                {/* category */}
                 <div className="bg-gray-100 rounded-md p-2 my-5">
                     <h3 className="text-xl font-semibold mt-2">Category</h3>
                     <p><hr className="border-[1px] border-[#ff882a] mt-2 mb-5" /></p>
@@ -105,7 +106,7 @@ const AllPhonesProduct = () => {
                     </FormGroup>
                 </div>
 
-                {/* rating */}
+                
                 <div className="bg-gray-100 rounded-md p-2 my-5">
                     <h3 className="text-xl font-semibold mt-2">Rating</h3>
                     <p><hr className="border-[1px] border-[#ff882a] mt-2 mb-5" /></p>
@@ -118,7 +119,7 @@ const AllPhonesProduct = () => {
                     </FormGroup>
                 </div>
 
-            </div>
+            </div> */}
 
             <div className="w-full flex-1 max-w-5xl mx-auto">
                 <section className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-10 ">

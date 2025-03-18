@@ -126,7 +126,7 @@ const ReadyOrder = () => {
 
                                     <div className="phones-center text-center mb-5">
                                         <h3 className="text-semibold mb-5">{phone?.model}</h3>
-                                        <p>{phone?.cashDiscountPrice}</p>
+                                        <p>$ {phone?.cashDiscountPrice}</p>
                                     </div>
 
                                     <div className="flex justify-evenly pb-3">

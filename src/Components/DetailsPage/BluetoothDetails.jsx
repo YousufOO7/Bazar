@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router";
+import { Link, useLocation, useNavigate, useParams } from "react-router";
 import ReactImageMagnify from 'react-image-magnify';
 import { useQuery } from "@tanstack/react-query";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
@@ -6,17 +6,22 @@ import * as React from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
+import useAxiosSecure from "../../Hooks/useAxiosSecure";
+import useAuth from "../../Hooks/useAuth";
+import Swal from "sweetalert2";
 
 const BluetoothDetails = () => {
     const [value, setValue] = React.useState('one');
+    const { id } = useParams();
+    const axiosPublic = useAxiosPublic();
+    const axiosSecure = useAxiosSecure();
+    const navigate = useNavigate();
+    const location = useLocation();
+    const { user } = useAuth();
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
-
-    const { id } = useParams();
-
-    const axiosPublic = useAxiosPublic();
 
     const { data: bluetoothDetails = [] } = useQuery({
         queryKey: ["bluetoothDetails", id],
@@ -26,6 +31,54 @@ const BluetoothDetails = () => {
             return res.data
         }
     });
+
+    // add cart 
+    const handleAddToCard = bluetoothDetails => {
+        if (user && user?.email) {
+            const cartItem = {
+                productId: bluetoothDetails._id,
+                model: bluetoothDetails?.model,
+                email: user?.email,
+                price: parseFloat(bluetoothDetails?.cashDiscountPrice),
+                image: bluetoothDetails?.mainImage
+            }
+
+            axiosSecure.post('/carts', cartItem)
+                .then(res => {
+                    // send to database to the cart
+                    if (res.data.insertedId) {
+                        Swal.fire({
+                            position: "center",
+                            icon: "success",
+                            title: `${bluetoothDetails?.model} added to the cart`,
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                    }
+                })
+        }
+        else {
+            Swal.fire({
+                title: "You are not logged in!",
+                text: "Please login to add to the card!",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Yes, login"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    navigate('/tab', { state: { from: location } })
+                    // Swal.fire({
+                    //     title: "Deleted!",
+                    //     text: "Your file has been deleted.",
+                    //     icon: "success"
+                    // });
+                }
+            });
+
+        }
+    }
 
 
     return (
@@ -79,9 +132,8 @@ const BluetoothDetails = () => {
                         <h3 className="bg-gray-50 px-2 py-1">Product Code: {bluetoothDetails?.productCode}</h3>
 
 
-                        <div className="flex space-x-4">
-                            <button className="px-2 md:px-4 py-1 text-xs md:text-[16px] border hover:bg-[#ff882a] hover:text-white border-[#ff882a]">Add To Cart</button>
-                            <button className="px-2 md:px-4 py-1 text-xs md:text-[16px] border hover:bg-[#ff882a] hover:text-white border-[#ff882a]">Add To Cart</button>
+                        <div >
+                            <button onClick={() => handleAddToCard(bluetoothDetails)} className="px-2 p-1 border border-[#ff882a] text-[#ff882a] text-xs lg:text-sm rounded-md hover:bg-[#ff882a] hover:text-white transition duration-700 ease-in-out">Add To Cart</button>
                         </div>
                     </div>
                 </section>
