@@ -125,7 +125,7 @@ const AllLaptopsProduct = () => {
                         allLaptops.map(laptops => (
                              <div key={laptops._id} className="w-[190px] md:w-[220px] lg:w-[190px] rounded-2xl p-1 border-2 shadow-xl">
                                 <div className="flex justify-center">
-                                    <img src={laptops?.mainImage} alt="" className="h-[180px]" />
+                                    <img src={laptops?.mainImage} alt="" className="h-[180px] bg-cover" />
                                 </div>
 
                                 <div className="items-center text-center mb-5">

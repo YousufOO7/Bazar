@@ -12,7 +12,7 @@ const Feature = () => {
         queryKey: ["phones"],
         queryFn: async () => {
             const res = await axiosPublic.get("/phones")
-            return res.data.slice(0, 1)
+            return res.data
         }
     })
 
@@ -20,7 +20,7 @@ const Feature = () => {
         queryKey: ["laptops"],
         queryFn: async () => {
             const res = await axiosPublic.get("/laptops")
-            return res.data.slice(0, 1)
+            return res.data
         }
     })
 
@@ -28,8 +28,8 @@ const Feature = () => {
         queryKey: ["bluetooths"],
         queryFn: async () => {
             const res = await axiosPublic.get("/bluetooths")
-            console.log(bluetooths)
-            return res.data.slice(0, 1)
+            // console.log(bluetooths)
+            return res.data
         }
     })
 
@@ -43,7 +43,7 @@ const Feature = () => {
             <section className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-7xl mx-auto">
                 {/* feature items */}
                 {
-                    phones.map(phone => (
+                    phones.slice(0, 1).map(phone => (
                         <div key={phone._id} className="flex justify-between gap-5 items-center border rounded-md">
                             <div className="flex justify-center items-center">
                                 <div><img src={phone?.mainImage} className="w-32 h-32" alt="" /></div>
@@ -58,7 +58,7 @@ const Feature = () => {
 
                 {/* laptop */}
                 {
-                    laptops.map(laptop => (
+                    laptops.slice(0, 1).map(laptop => (
                         <div key={laptop._id} className="flex justify-between gap-5 border rounded-md">
                             <div className="flex justify-center items-center">
                                 <div><img src={laptop?.mainImage} className="w-32 h-32" alt="" /></div>
@@ -73,7 +73,7 @@ const Feature = () => {
 
                 {/* bluetooth */}
                 {
-                    bluetooths.map(bluetooth => (
+                    bluetooths.slice(0, 1).map(bluetooth => (
                         <div key={bluetooth._id} className="flex justify-between gap-5 border rounded-md">
                             <div className="flex justify-center items-center">
                                 <div><img src={bluetooth?.mainImage} className="w-32 h-32" alt="" /></div>

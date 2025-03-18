@@ -15,7 +15,7 @@ const AllBluetoothsProduct = () => {
     const axiosSecure = useAxiosSecure();
     const navigate = useNavigate();
     const location = useLocation();
-    const {user} = useAuth();
+    const { user } = useAuth();
 
     const { data: allBluetooth = [] } = useQuery({
         queryKey: ["bluetooths"],
@@ -26,53 +26,53 @@ const AllBluetoothsProduct = () => {
     });
 
 
-     // add cart 
-            const handleAddToCard = bluetooth => {
-                if(user && user?.email){
-                    const cartItem = {
-                        productId: bluetooth._id,
-                        model: bluetooth?.model,
-                        email: user?.email,
-                        price: parseFloat(bluetooth?.cashDiscountPrice),
-                        image: bluetooth?.mainImage
-                    }
-        
-                    axiosSecure.post('/carts', cartItem)
-                        .then(res => {
-                            // send to database to the cart
-                            if (res.data.insertedId) {
-                                Swal.fire({
-                                    position: "center",
-                                    icon: "success",
-                                    title: `${bluetooth?.model} added to the cart`,
-                                    showConfirmButton: false,
-                                    timer: 1500
-                                });
-                            }
-                        })
-                }
-                else {
-                    Swal.fire({
-                        title: "You are not logged in!",
-                        text: "Please login to add to the card!",
-                        icon: "warning",
-                        showCancelButton: true,
-                        confirmButtonColor: "#3085d6",
-                        cancelButtonColor: "#d33",
-                        confirmButtonText: "Yes, login"
-                    }).then((result) => {
-                        if (result.isConfirmed) {
-                            navigate('/tab', { state: { from: location } })
-                            // Swal.fire({
-                            //     title: "Deleted!",
-                            //     text: "Your file has been deleted.",
-                            //     icon: "success"
-                            // });
-                        }
-                    });
-                
-                }
+    // add cart 
+    const handleAddToCard = bluetooth => {
+        if (user && user?.email) {
+            const cartItem = {
+                productId: bluetooth._id,
+                model: bluetooth?.model,
+                email: user?.email,
+                price: parseFloat(bluetooth?.cashDiscountPrice),
+                image: bluetooth?.mainImage
             }
+
+            axiosSecure.post('/carts', cartItem)
+                .then(res => {
+                    // send to database to the cart
+                    if (res.data.insertedId) {
+                        Swal.fire({
+                            position: "center",
+                            icon: "success",
+                            title: `${bluetooth?.model} added to the cart`,
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                    }
+                })
+        }
+        else {
+            Swal.fire({
+                title: "You are not logged in!",
+                text: "Please login to add to the card!",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Yes, login"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    navigate('/tab', { state: { from: location } })
+                    // Swal.fire({
+                    //     title: "Deleted!",
+                    //     text: "Your file has been deleted.",
+                    //     icon: "success"
+                    // });
+                }
+            });
+
+        }
+    }
 
 
     return (
@@ -124,7 +124,7 @@ const AllBluetoothsProduct = () => {
                 <section className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-10 ">
                     {
                         allBluetooth.map(bluetooth => (
-                             <div key={bluetooth._id} className="w-[190px] md:w-[220px] lg:w-[190px] rounded-2xl p-1 border-2 shadow-xl">
+                            <div key={bluetooth._id} className="w-[190px] md:w-[220px] lg:w-[190px] rounded-2xl p-1 border-2 shadow-xl">
                                 <div className="flex justify-center">
                                     <img src={bluetooth?.mainImage} alt="" className="h-[180px]" />
                                 </div>

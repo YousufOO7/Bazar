@@ -1,10 +1,13 @@
-import { FaHome, FaUsers } from "react-icons/fa";
+import { FaHome, FaShoppingCart, FaUsers } from "react-icons/fa";
 import { MdPreview } from "react-icons/md";
 import { RiCoupon2Fill } from "react-icons/ri";
 import { NavLink } from "react-router";
+import useAdmin from "../../../Hooks/useAdmin";
 
 
 const DashboardDrawer = () => {
+    const [isAdmin] = useAdmin();
+
     return (
         <div className="drawer">
             <input id="my-drawer" type="checkbox" className="drawer-toggle" />
@@ -19,7 +22,7 @@ const DashboardDrawer = () => {
                         <ul className="menu py-5">
 
                             {
-                                <>
+                                isAdmin ? <>
                                     <li>
                                         <NavLink to="/dashboard/addProduct">
                                             <MdPreview></MdPreview>
@@ -45,6 +48,22 @@ const DashboardDrawer = () => {
                                         </NavLink>
                                     </li>
                                 </>
+                                :
+
+                            <>
+                                <li>
+                                    <NavLink to="/dashboard/userHome">
+                                        <FaHome></FaHome>
+                                        User Profile
+                                    </NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to="/dashboard/cart">
+                                        <FaShoppingCart></FaShoppingCart>
+                                        My Cart
+                                    </NavLink>
+                                </li>
+                            </> 
                             }
                         </ul>
                         <div className="divider"></div>

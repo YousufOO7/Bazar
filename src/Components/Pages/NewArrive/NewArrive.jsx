@@ -18,7 +18,7 @@ const NewArrive = () => {
 
     return (
         <div>
-            <div className="my-10">
+            {/* <div className="my-10">
                 <TitleShared heading={"New Arrive"} />
                 <div className="flex justify-center mt-5">
                     <button className="px-4 py-1 border-b-2 border-[#ff882a]">Gadgets</button>
@@ -45,7 +45,7 @@ const NewArrive = () => {
                         </div>
                     ))
                 }
-            </section>
+            </section> */}
         </div>
     );
 };

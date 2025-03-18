@@ -182,9 +182,11 @@ const LaptopDetails = () => {
                 <div className="bg-white my-10  px-4">
                     <div className="border px-2">
                         <h2 className="text-2xl font-bold py-3 underline">Description</h2>
-                        <div className="w-4/6 mb-5">
+                        {
+                            laptopDetails?.descriptionImage ? <div className="w-4/6 mb-5">
                             <img src={laptopDetails?.descriptionImage} className="lg:w-[400px] lg:h-[400px] md:w-[300px] md:h-[300px]" alt="" />
-                        </div>
+                        </div> : ""
+                        }
                         <div className="space-y-3 ">
                             <h3 className="text-2xl font-bold">{laptopDetails?.descriptionTitleOne}</h3>
                             <p>{laptopDetails?.descriptionTextOne}</p>
