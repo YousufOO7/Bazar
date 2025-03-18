@@ -73,27 +73,27 @@ const Navbar = () => {
                         {/* Show search results in dropdown */}
                         {search && products.length > 0 && (
                             <ul className="absolute top-full left-0 w-full bg-white text-black border rounded-md z-50">
-                            {products.map((product) => {
-                                // Determine the correct link based on category/type
-                                let productType = "";
-                                if (product.category === "phone") {
-                                    productType = "phoneDetails";
-                                } else if (product.category === "laptop") {
-                                    productType = "laptopDetails";
-                                } else if (product.category === "bluetooth") {
-                                    productType = "bluetoothDetails";
-                                }
-                        
-                                return (
-                                    <li key={product._id} className="p-2 hover:bg-gray-200">
-                                        <Link to={`/${productType}/${product._id}`} onClick={() => setSearch("")}>
-                                            {product.brand} - {product.model}
-                                        </Link>
-                                    </li>
-                                );
-                            })}
-                        </ul>
-                        
+                                {products.map((product) => {
+                                    // Determine the correct link based on category/type
+                                    let productType = "";
+                                    if (product.category === "phone") {
+                                        productType = "phoneDetails";
+                                    } else if (product.category === "laptop") {
+                                        productType = "laptopDetails";
+                                    } else if (product.category === "bluetooth") {
+                                        productType = "bluetoothDetails";
+                                    }
+
+                                    return (
+                                        <li key={product._id} className="p-2 hover:bg-gray-200">
+                                            <Link to={`/${productType}/${product._id}`} onClick={() => setSearch("")}>
+                                                {product.brand} - {product.model}
+                                            </Link>
+                                        </li>
+                                    );
+                                })}
+                            </ul>
+
                         )}
 
                         <button className="absolute right-4 top-3"> <FaSearch className="text-orange-500" /></button>
@@ -103,13 +103,26 @@ const Navbar = () => {
                 {/* text and icons */}
                 <div className="hidden lg:block w-1/2">
                     <div className="flex justify-between gap-5">
-                        <Link to="/dashboard"> <div className="flex items-center space-x-1">
-                            <div><img src="https://www.applegadgetsbd.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgift.347df468.png&w=32&q=75" alt="" /></div>
-                            <div>
-                                <h4 className="text-bold text-[16px]">Dashboard</h4>
-                                <p className="text-semibold text-xs">{user && user?.displayName}</p>
-                            </div>
-                        </div></Link>
+                        {
+                            user && isAdmin && <Link to="/dashboard/manageUser"> <div className="flex items-center space-x-1">
+                                <div><img src="https://www.applegadgetsbd.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgift.347df468.png&w=32&q=75" alt="" /></div>
+                                <div>
+                                    <h4 className="text-bold text-[16px]">Dashboard</h4>
+                                    <p className="text-semibold text-xs">{user && user?.displayName}</p>
+                                </div>
+                            </div></Link>
+                        }
+
+                        {
+                            user && !isAdmin && <Link to="/dashboard/userProfile"> <div className="flex items-center space-x-1">
+                                <div><img src="https://www.applegadgetsbd.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgift.347df468.png&w=32&q=75" alt="" /></div>
+                                <div>
+                                    <h4 className="text-bold text-[16px]">Dashboard</h4>
+                                    <p className="text-semibold text-xs">{user && user?.displayName}</p>
+                                </div>
+                            </div></Link>
+                        }
+
                         {/* shop */}
                         <div className="flex items-center space-x-1">
                             <div><img src="https://www.applegadgetsbd.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcart.c2e800a4.png&w=32&q=75" alt="" /></div>

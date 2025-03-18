@@ -49,8 +49,11 @@ const AuthProvider = ({ children }) => {
             console.log("current User", currentUser);
             if(currentUser){
                 const userInfo = {
-                    email: currentUser?.email
+                    email: currentUser?.email,
+                    image: currentUser?.photoURL,
+                    name: currentUser?.displayName
                 }
+                console.log(userInfo)
                 axiosPublic.post('/jwt', userInfo)
                 .then(res => {
                     if(res.data.token){

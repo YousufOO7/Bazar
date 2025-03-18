@@ -14,6 +14,7 @@ import PhoneDetails from "./Components/DetailsPage/PhoneDetails"
 import LaptopDetails from "./Components/DetailsPage/LaptopDetails"
 import BluetoothDetails from "./Components/DetailsPage/BluetoothDetails"
 import Cart from "./Components/UserDashboard/Cart/Cart"
+import UserProfile from "./Components/UserDashboard/UserProfile/UserProfile"
 
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
             <Route path="allProducts" element={<AllProductsByAdmin />}></Route>
 
             {/* normal user */}
+            <Route path="userProfile" element={<UserProfile />}></Route>
             <Route path="cart" element={<Cart />}></Route>
           </Route>
         </Routes>

@@ -17,12 +17,13 @@ const GoogleLogin = () => {
             const userInfo = {
                 email: user?.email,
                 name: user?.displayName,
+                image: user?.photoURL
             }
             axiosPublic.post("/users", userInfo)
             .then(res => {
                 console.log(res.data)
             })
-            // navigate(location?.state ? location?.state : '/')
+            navigate(location?.state ? location?.state : '/')
             toast.success("SignIn Successful!!")
         })
         .catch(error => {
