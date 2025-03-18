@@ -15,6 +15,7 @@ import LaptopDetails from "./Components/DetailsPage/LaptopDetails"
 import BluetoothDetails from "./Components/DetailsPage/BluetoothDetails"
 import Cart from "./Components/UserDashboard/Cart/Cart"
 import UserProfile from "./Components/UserDashboard/UserProfile/UserProfile"
+import Payment from "./Components/UserDashboard/Payment/Payment"
 
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
             {/* normal user */}
             <Route path="userProfile" element={<UserProfile />}></Route>
             <Route path="cart" element={<Cart />}></Route>
+            <Route path="payment" element={<Payment />}></Route>
           </Route>
         </Routes>
       </div>

@@ -124,13 +124,13 @@ const Navbar = () => {
                         }
 
                         {/* shop */}
-                        <div className="flex items-center space-x-1">
-                            <div><img src="https://www.applegadgetsbd.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcart.c2e800a4.png&w=32&q=75" alt="" /></div>
+                        <Link to="/dashboard/cart"> <div className="flex items-center space-x-1">
+                         <div><img src="https://www.applegadgetsbd.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcart.c2e800a4.png&w=32&q=75" alt="" /></div>
                             <div>
-                                <Link to="/dashboard/cart"><h4 className="text-bold text-[16px]">Cart <span>{cart.length}</span></h4></Link>
+                                <h4 className="text-bold text-[16px]">Cart <span>{cart.length}</span></h4>
                                 <p className="text-semibold text-xs">Add Items</p>
                             </div>
-                        </div>
+                        </div></Link>
                         {/* pre order */}
                         {/* <div className="flex items-center">
                             <div><img src="https://www.applegadgetsbd.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fshop.638fa252.png&w=32&q=75" alt="" /></div>

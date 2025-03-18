@@ -21,7 +21,7 @@ const GoogleLogin = () => {
             }
             axiosPublic.post("/users", userInfo)
             .then(res => {
-                console.log(res.data)
+                // console.log(res.data)
             })
             navigate(location?.state ? location?.state : '/')
             toast.success("SignIn Successful!!")

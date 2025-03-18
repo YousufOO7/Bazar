@@ -7,7 +7,7 @@ import { FaTrash } from 'react-icons/fa';
 const Cart = () => {
     const [cart, refetch] = useCart();
     const totalPrice = cart.reduce((total, item) => total + item.price, 0);
-    console.log(totalPrice)
+    // console.log(totalPrice)
     const axiosSecure = useAxiosSecure();
 
     const handleItemDelete = id => {
@@ -48,7 +48,7 @@ const Cart = () => {
                 }
             </div>
 
-            <div className='bg-white'>
+            <div className='bg-white px-5'>
                 <div className="overflow-x-auto">
                     <table className="table">
                         {/* head */}

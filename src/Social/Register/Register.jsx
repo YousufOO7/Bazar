@@ -26,14 +26,14 @@ const Register = () => {
             .then(result => {
                 const user = result.user;
                 setUser(user);
-                console.log(user)
+                // console.log(user)
                 updateUserProfile({ displayName: name, photoURL: image })
                 const userInfo = {
                     name: user?.displayName,
                     email: user?.email,
                     image: user?.image
                 }
-                console.log("register" ,userInfo)
+                // console.log("register" ,userInfo)
                 axiosPublic.post("/users", userInfo)
                     .then(res => {
                         if (res.data.insertedId) {
