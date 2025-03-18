@@ -28,6 +28,7 @@ const Feature = () => {
         queryKey: ["bluetooths"],
         queryFn: async () => {
             const res = await axiosPublic.get("/bluetooths")
+            console.log(bluetooths)
             return res.data.slice(0, 1)
         }
     })

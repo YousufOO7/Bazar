@@ -1,11 +1,12 @@
 import { FaSearch } from "react-icons/fa";
 import { Link } from "react-router";
 import useAuth from "../../Hooks/useAuth";
+import useCart from "../../Hooks/useCart";
 
 
 const Navbar = () => {
-
     const { user, Logout } = useAuth();
+    const [cart] = useCart();
 
     return (
         <div className="bg-[black] text-white py-4 px-2 md:px-5 lg:px-10">
@@ -45,31 +46,31 @@ const Navbar = () => {
                 {/* text and icons */}
                 <div className="hidden lg:block w-1/2">
                     <div className="flex justify-between gap-5">
-                        <Link to="/dashboard"> <div className="flex items-center">
+                        <Link to="/dashboard"> <div className="flex items-center space-x-1">
                             <div><img src="https://www.applegadgetsbd.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgift.347df468.png&w=32&q=75" alt="" /></div>
                             <div>
-                                <h4 className="text-bold text-[16px]">Offers</h4>
-                                <p className="text-semibold text-xs">Latest Offer</p>
+                                <h4 className="text-bold text-[16px]">Dashboard</h4>
+                                <p className="text-semibold text-xs">{user && user?.displayName}</p>
                             </div>
                         </div></Link>
                         {/* shop */}
-                        <div className="flex items-center">
+                        <div className="flex items-center space-x-1">
                             <div><img src="https://www.applegadgetsbd.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcart.c2e800a4.png&w=32&q=75" alt="" /></div>
                             <div>
-                                <h4 className="text-bold text-[16px]">Cart <span>(0)</span></h4>
+                             <Link to="/dashboard/cart"><h4 className="text-bold text-[16px]">Cart <span>{cart.length}</span></h4></Link>
                                 <p className="text-semibold text-xs">Add Items</p>
                             </div>
                         </div>
                         {/* pre order */}
-                         <div className="flex items-center">
+                         {/* <div className="flex items-center">
                             <div><img src="https://www.applegadgetsbd.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fshop.638fa252.png&w=32&q=75" alt="" /></div>
                             <div>
                                 <h4 className="text-bold text-[16px]">Pre-Order</h4>
                                 <p className="text-semibold text-xs">Order Today</p>
                             </div>
-                        </div>
+                        </div> */}
                         {/* Account */}
-                        <Link to="tab"> <div className="flex items-center">
+                        <Link to="tab"> <div className="flex items-center space-x-1">
                             <div><img src="https://www.applegadgetsbd.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fuser.4115a831.png&w=32&q=75" alt="" /></div>
                             <div>
                                 <h4 className="text-bold text-[16px]">Account</h4>
