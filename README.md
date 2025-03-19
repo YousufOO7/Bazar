@@ -8,6 +8,13 @@
 <ul>
 <li>CRUD operation</li>
 <li>JWT authentication</li>
+
+
+  - Responsive Design 
+  Built using TailwindCSS and DaisyUI, MUI, ensuring compatibility across devices.
+- Real-time Feedback
+  Notifications powered by React-Toastify, React-Sweet-alert for a better user experience.
+
 </ul>
 <h3>How to use manually</h3>
 <ul>
@@ -16,11 +23,29 @@
     <p>Make sure your file have env.local file</p> 
 </ul>
 
+ Technologies Used 
+
+### Frontend
+- **React**: Component-based JavaScript library for building the UI.
+- **React-Router-Dom**: For managing application routing.
+- **TailwindCSS**: Utility-first CSS framework for styling.
+- **DaisyUI**: TailwindCSS component library for reusable UI elements.
+- **MUI**: material-ui component library for reusable UI elements.
+- **React-Toastify**: Real-time notification system.
+- **Sweet-Alert**: Real-time notification system.
+
+### Backend
+- **Firebase** - Authentication for secure user management.
+- **JWT** - Authentication for secure user panel.
+- **Stripe** - Payment for secure user.
+- **MongoDB** - To store Users data as a primary Database.
+
 <h3>Npm package:</h3>
 <ul>
 <li>Axios</li>
+<li>TenStack</li>
+<li>Stripe</li>
 <li>framer-motion</li>
-<li>lottie-react</li>
 <li>react-datepicker</li>
 <li>react-icons</li>
 <li>react-simple-star-rating</li>
