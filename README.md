@@ -2,7 +2,7 @@
 
 <p>Description: I have created a fully functional e-commerce website where users can browse and purchase phones, laptops, and Bluetooth devices. The platform features a seamless shopping experience with product categorization, search functionality, and a user-friendly interface. Additionally, I have integrated a secure Stripe payment system to ensure smooth and reliable transactions.</p>
 
-<h2>Live link: https://bazar-a3c5a.web.app</h2>
+<h2>Live link: https://bazar-e-ommerce.netlify.app/</h2>
 
 <h3>Key Feature:</h3>
 <ul>
