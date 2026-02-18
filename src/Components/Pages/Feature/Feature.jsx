@@ -34,13 +34,13 @@ const Feature = () => {
     })
 
     return (
-        <div className="my-10">
+        <div className="my-10 container mx-auto px-4 md:px-8 ">
             {/* title */}
             <div className="mb-10">
                 <TitleShared heading={"Feature Category"} subHeading={"Get your desired product from featured category"} />
             </div>
 
-            <section className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-7xl mx-auto">
+            <section className="grid grid-cols-1 md:grid-cols-3 gap-5 ">
                 {/* feature items */}
                 {
                     phones.slice(0, 1).map(phone => (

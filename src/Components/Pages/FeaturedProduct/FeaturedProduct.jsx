@@ -134,7 +134,7 @@ const FeaturedProduct = () => {
 
 
     return (
-        <div>
+        <div className="container mx-auto px-4 md:px-8">
             <div className="mb-10">
                 <TitleShared heading={"Featured Products"} />
 
@@ -153,7 +153,7 @@ const FeaturedProduct = () => {
             {/* Best Deal */}
             {
                 activeBtn === "phones" && (
-                    <section className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-10 px-4 md:px-8 lg:px-16">
+                    <section className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-10 px-4 md:px-8 lg:px-0">
                         {
                             allPhones.slice(0, 12).map(deal => (
                                 <div key={deal._id} className="w-[200px] rounded-2xl p-1 border-2 shadow-xl">
@@ -181,7 +181,7 @@ const FeaturedProduct = () => {
             {/* Best laptops */}
             {
                 activeBtn === "laptops" && (
-                    <section className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-10 px-4 md:px-8 lg:px-16">
+                    <section className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-10 px-4 md:px-8 lg:px-0">
                         {
                             allLaptops.slice(0, 6).map(laptops => (
                                 <div key={laptops.id} className="w-[200px] rounded-2xl p-1 border-2 shadow-xl">
@@ -208,7 +208,7 @@ const FeaturedProduct = () => {
 
             {/* images for adds */}
 
-            <div className="flex gap-5 my-10 px-5 md:px-8 lg:px16">
+            <div className="flex gap-5 my-10 px-5 md:px-8 lg:px-0">
                 <div>
                     <img src="https://adminapi.applegadgetsbd.com/storage/media/large/MacBook-Air-M2-7448.png" alt="" />
                 </div>

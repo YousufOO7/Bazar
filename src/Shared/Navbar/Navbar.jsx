@@ -6,6 +6,7 @@ import useAdmin from "../../Hooks/useAdmin";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
+import bazarLogo from '../../assets/bazarLogo.jpg'
 
 
 const Navbar = () => {
@@ -27,7 +28,7 @@ const Navbar = () => {
 
     return (
         <div className="bg-[black] text-white py-4 px-2 md:px-5 lg:px-10">
-            <div className="flex items-center gap-5 justify-between">
+            <div className="flex items-center gap-5 justify-between container mx-auto">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
                         <svg
@@ -59,7 +60,7 @@ const Navbar = () => {
                 </div>
                 {/* image and search */}
                 <div className="flex items-center gap-10 w-full lg:w-1/2">
-                    <Link to="/"><img src="https://www.applegadgetsbd.com/_next/image?url=https%3A%2F%2Fadminapi.applegadgetsbd.com%2Fstorage%2Fmedia%2Fcommon%2Flogo.png&w=256&q=75" className="w-32 md:w-40" alt="image" /></Link>
+                    <Link to="/"><img src={bazarLogo} className="w-32 md:w-40 bg-black rounded-md" alt="image" /></Link>
 
                     <div className="relative w-full">
                         <input
@@ -104,7 +105,7 @@ const Navbar = () => {
                 <div className="hidden lg:block w-1/2">
                     <div className="flex justify-between gap-5">
                         {
-                            user && isAdmin && <Link to="/dashboard/manageUser"> <div className="flex items-center space-x-1">
+                            user && isAdmin && <Link to="/dashboard/manageUsers"> <div className="flex items-center space-x-1">
                                 <div><img src="https://www.applegadgetsbd.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgift.347df468.png&w=32&q=75" alt="" /></div>
                                 <div>
                                     <h4 className="text-bold text-[16px]">Dashboard</h4>

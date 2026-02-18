@@ -8,11 +8,11 @@ import 'swiper/css/navigation';
 
 
 // import required modules
-import { Pagination, Navigation, Autoplay } from 'swiper/modules';
+import { Pagination, Autoplay } from 'swiper/modules';
 
 const Carousel = () => {
     return (
-        <div className='lg:flex gap-5 my-10 px-4 md:px-8 lg:px-16'>
+        <div className='container mx-auto lg:flex gap-5 my-10 px-4 md:px-8 lg:0'>
             <div className='w-full lg:w-4/6'>
                 <Swiper
                     slidesPerView={1}

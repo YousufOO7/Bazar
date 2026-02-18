@@ -2,7 +2,9 @@
 
 const Texts = () => {
     return (
-        <div className="my-10 px-4 md:px-8 lg:px-16 space-y-2">
+        <div className="container mx-auto">
+        
+        <div className="my-10 px-4 md:px-7 space-y-2">
             <h2 className="text-font text-3xl mb-2">Top Gadget Shop in Bangladesh</h2>
             <p>We are now going through a period when technology brings the revolution. From dawn to dusk every moment in our life is connected to technology. Various kinds of smart gadgets become inseparable parts of our daily life. Consistent with the demand there is a huge gadget-selling market globally including Bangladesh. In Bangladesh, Apple Gadgets is a top-tier gadget-selling shop. They provide consumers a huge collection of gadgets: Phones & Tablets, Laptops & Desktops, Accessories, Smart Home Appliances etc. Apple Gadgets satisfies its huge customer base both online and offline. Currently, it serves customers with four outlets around Dhaka city at four different locations.  Best customer service makes Apple Gadgets a trustworthy retail gadgets shop in Dhaka, Bangladesh.</p>
 
@@ -17,6 +19,7 @@ const Texts = () => {
 
             <h2 className="text-font text-3xl mb-2">Top AirPods & Earbuds Shop in Dhaka, Bangladesh</h2>
             <p>When fashion meets the needs then products like AirPods come out. This stylish and compact listening equipment changes the trends of headphones. The demand for earbuds is rising rapidly globally including in Bangladesh. Apple Gadgets is well known for selling AirPods and earbuds in Dhaka, Bangladesh. You can buy Apple AirPods or other brands of earbuds at a very reasonable price. Besides Apple, there is a huge collection of other brands of earbuds. Such as Samsung, Xiaomi, OnePlus, Huawei, Realme, Joyroom, Haylou, JBL, Nothing, USMAS, Wavefun, etc.</p>
+        </div>
         </div>
     );
 };

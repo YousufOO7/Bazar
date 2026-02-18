@@ -81,12 +81,12 @@ const ReadyOrder = () => {
         }
 
     return (
-        <div>
+        <div className="container mx-auto px-4 md:px-6">
             <div className="mb-10">
                 <TitleShared heading={"Ready Order 🔥"} />
             </div>
 
-            <section className="my-10 px-4 md:px-8 lg:px-16 ">
+            <section className="my-10 px-4 md:px-8 lg:px-0">
                 <Swiper
                     slidesPerView={1}
                     spaceBetween={10}
